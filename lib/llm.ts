@@ -21,6 +21,7 @@ export async function json<T>(model: string, system: string, user: string, tempe
           { role: "user", content: user },
         ],
       });
+      console.log(`usage ${model} ${r.usage?.prompt_tokens} ${r.usage?.completion_tokens}`);
       return JSON.parse(r.choices[0].message.content ?? "{}") as T;
     } catch (e: any) {
       const retry = e?.status === 429 || e?.status >= 500 || e instanceof SyntaxError;

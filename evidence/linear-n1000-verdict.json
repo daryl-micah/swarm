@@ -1,0 +1,91 @@
+{
+ "objections": [
+  {
+   "theme": "Unclear or missing pricing (tiers, observer seats, viewer costs, scaling)",
+   "count": 45
+  },
+  {
+   "theme": "No self-hosting / data sovereignty / on-prem / air-gapped deployment",
+   "count": 35
+  },
+  {
+   "theme": "No multi-tenancy support / observer seat limits / stakeholder isolation",
+   "count": 20
+  },
+  {
+   "theme": "Missing PM / non-engineering workflows (calendar triage, stakeholder reporting, PM context)",
+   "count": 18
+  },
+  {
+   "theme": "No visual planning canvas / roadmap view for creative/strategy teams",
+   "count": 12
+  },
+  {
+   "theme": "Vague AI claims / too much hype, not enough concrete agent workflow details",
+   "count": 10
+  },
+  {
+   "theme": "Missing integrations (GitHub depth, Calendar, SCIM/SSO, regulated release gates)",
+   "count": 10
+  },
+  {
+   "theme": "Missing compliance / audit trail / regulated release gate support",
+   "count": 10
+  },
+  {
+   "theme": "No free unlimited viewer tier / viewer pricing not disclosed",
+   "count": 10
+  },
+  {
+   "theme": "Performance fixes not shipped / vague iOS startup performance claims",
+   "count": 8
+  },
+  {
+   "theme": "Missing automated reporting loops (burndown, retro, client status)",
+   "count": 8
+  },
+  {
+   "theme": "Too dev-centric / steep learning curve / not marketing-ops friendly",
+   "count": 8
+  },
+  {
+   "theme": "No PR triage automation for first-time contributors",
+   "count": 6
+  },
+  {
+   "theme": "Missing mature analytics / automation maturity / nightly perf regression loops",
+   "count": 6
+  },
+  {
+   "theme": "No calendar integration / scheduling automation",
+   "count": 5
+  }
+ ],
+ "rewrites": [
+  {
+   "index": 0,
+   "text": "## The product development system for teams and agents\n\nPurpose-built for planning and building products. Designed for the AI era.\n\n[New Loops \u2192](https://linear.app/now/introducing-loops)\n\n**Loops** are recurring agent workflows that respond to workspace activity \u2014 initiatives, projects, cycles \u2014 and can edit Linear documents and post updates to Slack.\n\n**Priority Inbox** separates what needs your attention from what can wait, so a review blocking a release never gets buried.\n\n**Coding sessions** let Linear Agent set up, run, and test code in a secure cloud environment before opening a pull request for review.\n\nLinear powers **40,000+** product teams \u2014 from ambitious startups to major enterprises.\n\n[Customer stories \u2192](/customers)\n\n[Get started](/signup) \u00b7 [Contact sales](/contact/sales) \u00b7 [Open app](/login) \u00b7 [Download](/download)"
+  },
+  {
+   "index": 2,
+   "text": "## A new species of product tool\n\nPurpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.\n\n### Purpose-built\nShaped by the practices and principles of world-class product teams.\n\n### Powered by agents\nDesigned for workflows shared by humans and agents \u2014 from drafting PRDs to pushing PRs. Linear Agent works in a secure cloud environment to write and test code before opening a pull request for review.\n\n### Designed for speed\nReduces noise and restores momentum to help teams ship with high velocity and focus. Priority Inbox surfaces blocking reviews; Loops automate recurring product management workflows across initiatives, projects, and cycles."
+  },
+  {
+   "index": 1,
+   "text": "### Faster app launch\n\nRender UI before `vehicle_state` sync completes when minimum required state is present, instead of blocking on full refresh during iOS startup.\n\n#### Activity\nLinear created the issue via Slack; Triage Intelligence added **Performance** and **iOS** labels. Team discussion identified the spinner blocking initial render. Linear produced a draft PR changing 2 files \u2014 moving the issue from **Todo** to **In Progress**.\n\n#### Code change (HomeScreen.tsx)\n```diff\n- if (syncStatus === SyncStatus.PENDING) { return <ActivityIndicator size=\"large\" /> }\n+ if (!isFullySynced) { return <ActivityIndicator size=\"large\" /> }\n+ return <Dashboard state={vehicleState} syncStatus={syncStatus} />\n```\n\nThe fix returns the dashboard with partial state while sync continues in background. Shipped in **Linear App 1.6881** (Jun 25)."
+  }
+ ],
+ "gaps": [
+  "Pricing tiers, observer/viewer seat costs, and scaling model",
+  "Self-hosted / on-prem / air-gapped deployment options",
+  "Data sovereignty, SSO/SCIM, audit trail, compliance certifications",
+  "Multi-tenancy / stakeholder workspace isolation",
+  "Dedicated PM workflows: calendar-invite triage, stakeholder reporting loops, regulated release gates",
+  "Visual planning canvas / read-only roadmap view",
+  "GitHub integration depth (PR triage for newcomers, auto-bisect, nightly perf regression)",
+  "Calendar integration / scheduling automation",
+  "Free unlimited viewer tier",
+  "Concrete AI onboarding steps and workflow customization engine",
+  "Non-engineering workflow support (marketing, ops, creative/strategy teams)"
+ ]
+}

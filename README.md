@@ -44,3 +44,18 @@ List the model ids your key can use with `curl $NEBIUS_BASE_URL/models -H "Autho
 ## License
 
 MIT
+
+## Evidence
+
+Raw captures of real runs against `https://linear.app` on Token Factory (Nano `NVIDIA-Nemotron-3-Nano-30B-A3B`, Ultra `Nemotron-3-Ultra-550b-a55b`, Nano concurrency 16). List reactions with `grep -A1 '^event: reaction' <file>`.
+
+| Capture | Personas | Wall time | buy / maybe / bounce | Cost |
+|---|---|---|---|---|
+| [`evidence/linear-n30-v1-prompt.sse`](evidence/linear-n30-v1-prompt.sse) | 30 | 39s | 0 / 18 / 12 (first Nano prompt, too hedged) | ~$0.02 (est.) |
+| [`evidence/linear-n100.sse`](evidence/linear-n100.sse) | 100 | 72s | 25 / 46 / 29 | ~$0.07 (est.) |
+| [`evidence/linear-n1000.sse`](evidence/linear-n1000.sse) | 1,000 | 637s | 285 / 420 / 295 | $0.58 (measured) |
+| [`evidence/linear-n1000-verdict.json`](evidence/linear-n1000-verdict.json) | verdict on the 1,000 | ~20s | 15 ranked objection themes, 11 gaps the page doesn't answer, 3 rewrites that add no facts | $0.02 (measured) |
+
+The 1,000-persona run completed with no errors or 429s. Measured usage: Nano 1,000 calls, 6.06M input and 0.83M output tokens ($0.56); Ultra segments 4.1k in / 2.4k out ($0.01); Ultra verdict 8.7k in / 6.9k out ($0.03). Prices are the Token Factory list prices (Nano $0.06 in / $0.24 out per 1M tokens, Ultra $1 / $3). The 30 and 100 runs predate usage logging, so their cost is scaled from the 1,000-run per-call averages.
+
+Token Factory limits Nano to 100 requests/min and 800k tokens/min, so 1,000 personas takes about 10 minutes until those limits are raised.
