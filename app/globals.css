@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9f7f1;
+  --card: #fefdfc;
+  --muted: #efede7;
+  --foreground: #0c1316;
+  --muted-foreground: #4f575b;
+  --border: #cbc9c3;
+  --accent: #3f7d00;
+  --accent-foreground: #ffffff;
+  --green: #1f7a4d;
+  --green-soft: #e1f1e7;
+  --amber: #bd8424;
+  --amber-soft: #f7ecd8;
+  --destructive: #bb061e;
+  --destructive-soft: #f9e1e3;
+  --radius: 14px;
+  --shadow-media: 0 30px 80px #0c242924, 0 6px 20px #0c242914;
+}
+
+.dark {
+  --background: #04080b;
+  --card: #0b1418;
+  --muted: #10191d;
+  --foreground: #eef5f8;
+  --muted-foreground: #8f9598;
+  --border: #273136;
+  --accent: #76b900;
+  --accent-foreground: #04080b;
+  --green: #4cc38a;
+  --green-soft: #12261c;
+  --amber: #e0a94a;
+  --amber-soft: #2a2112;
+  --destructive: #f0596b;
+  --destructive-soft: #2b1216;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-soft: var(--destructive-soft);
+  --radius-card: var(--radius);
+  --font-serif: var(--font-instrument-serif);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body { background: var(--background); color: var(--foreground); font: 400 1rem/1.6 var(--font-inter), sans-serif; }
+h1 { font: 400 clamp(2.75rem, 6vw, 4.5rem)/1.05 var(--font-instrument-serif), serif; }
+h2 { font: 400 clamp(2rem, 4vw, 3rem)/1.1 var(--font-instrument-serif), serif; }
+h3 { font: 600 1.25rem/1.4 var(--font-inter), sans-serif; }
+.small { font-size: 0.875rem; line-height: 1.5; }
+.data { font: 400 0.8125rem/1.5 var(--font-jetbrains-mono), monospace; font-variant-numeric: tabular-nums; }
+.label { font: 500 0.75rem/1.4 var(--font-jetbrains-mono), monospace; text-transform: uppercase; letter-spacing: 0.08em; }
+
+:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--accent); }
+.status-ok { box-shadow: inset 4px 0 0 var(--green); }
+.status-held { box-shadow: inset 4px 0 0 var(--amber); }
+.status-blocked { box-shadow: inset 4px 0 0 var(--destructive); }
+.shadow-media { box-shadow: var(--shadow-media); }
+
+.btn { height: 40px; padding: 0 16px; border-radius: var(--radius); font: 500 0.875rem/1 var(--font-inter), sans-serif; transition: background-color 150ms ease-out; }
+.btn-primary { background: var(--accent); color: var(--accent-foreground); }
+.btn-primary:hover:not(:disabled) { background: color-mix(in oklab, var(--accent) 88%, var(--foreground)); }
+.btn-primary:active:not(:disabled) { background: color-mix(in oklab, var(--accent) 78%, var(--foreground)); }
+.btn-secondary { background: var(--card); border: 1px solid var(--border); color: var(--foreground); }
+.btn-secondary:hover:not(:disabled) { background: var(--muted); }
+.btn-secondary:active:not(:disabled) { background: var(--muted); border-color: var(--foreground); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.input { height: 40px; padding: 0 12px; width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); }
+.input::placeholder { color: var(--muted-foreground); }
+.input:disabled { background: var(--muted); color: var(--muted-foreground); }
+.input[aria-invalid="true"] { border-color: var(--destructive); }
+
+.cell { transition: background-color 150ms ease-out; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
