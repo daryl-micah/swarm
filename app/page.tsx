@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import type { Persona, Segment } from "@/lib/personas";
 
-type Verdict = { objections: { theme: string; count: number }[]; rewrites: { index: number; text: string }[] };
+type Verdict = { objections: { theme: string; count: number }[]; rewrites: { index: number; text: string }[]; gaps?: string[] };
 type Phase = "idle" | "running" | "done" | "judging" | "verdict" | "rerunning" | "rerun";
 
 // POST and call onEvent for each SSE event
@@ -190,6 +190,12 @@ export default function Page() {
               </li>
             ))}
           </ol>
+          {!!verdict.gaps?.length && (
+            <Card>
+              <p className="label mb-3">Gaps the page does not answer</p>
+              <ul className="small list-disc pl-6">{verdict.gaps.map((g) => <li key={g}>{g}</li>)}</ul>
+            </Card>
+          )}
           {verdict.rewrites.map((w) => (
             <Card key={w.index}>
               <p className="label mb-3">Rewrite · section {w.index}</p>
