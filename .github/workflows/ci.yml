@@ -1,0 +1,55 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npm run check
+      - run: npm run build
+        env:
+          NEBIUS_API_KEY: build # the OpenAI client throws at import without a key
+
+  deploy:
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    concurrency: deploy
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: us-east-1
+      SG: sg-0f42a8ba5fa98d624
+      HOST: ec2-user@184.197.89.40
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t swarm:local .
+      - name: Open SSH for this runner
+        run: |
+          ip=$(curl -s https://checkip.amazonaws.com)
+          echo "RUNNER_IP=$ip" >> "$GITHUB_ENV"
+          aws ec2 authorize-security-group-ingress --group-id "$SG" --protocol tcp --port 22 --cidr "$ip/32"
+      - name: Ship image and restart
+        env:
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          install -m 600 /dev/null key.pem
+          printf '%s\n' "$EC2_SSH_KEY" > key.pem
+          SSH="ssh -i key.pem -o StrictHostKeyChecking=no -o ConnectTimeout=20 $HOST"
+          docker save swarm:local | gzip | $SSH 'gunzip | docker load'
+          $SSH 'docker rm -f swarm; docker run -d --name swarm --network swarm --env-file /opt/swarm/.env --restart unless-stopped swarm:local'
+          rm key.pem
+      - name: Close SSH
+        if: always()
+        run: aws ec2 revoke-security-group-ingress --group-id "$SG" --protocol tcp --port 22 --cidr "$RUNNER_IP/32"
