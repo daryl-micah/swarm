@@ -1,0 +1,309 @@
+event: segments
+data: [{"name":"AI-Native Startup Founders","weight":0.12,"painPoints":["Scattered product ops across chats, docs, vague weekly calls","Need evidence of progress not just feeling of busy","Agents installed but not managed like direct reports","No system for designing agent roles, structured feedback, evolving agent files"],"budget":[200,800]},{"name":"Series A/B Engineering-Led Companies","weight":0.18,"painPoints":["Jira too heavy, ClickUp too generic, Linear learning curve for new hires","Vocabulary (issues, cycles, triage) alienates PMs/designers","Marketing/sales/ops find tool too developer-focused","Tasks and emails remain separate - communication not managed"],"budget":[800,3000]},{"name":"Mid-Market Product-Led Orgs (100-500)","weight":0.15,"painPoints":["Cross-functional teams juggling marketing, ops, design alongside code","Linear great for engineering but creative/product-strategy work not ticket-shaped","Need visual planning canvas alongside issue tracking","Stakeholder visibility limited - read-only seats cost extra"],"budget":[3000,8000]},{"name":"Enterprise Platform Teams (500-2000)","weight":0.14,"painPoints":["Deep agile machinery needed but Linear opinionated speed preferred","Customizable enterprise tracking vs. Linear's constraints","Self-hosting/data residency requirements","Agent governance at scale - 75%+ workspaces have agents but no management framework"],"budget":[8000,25000]},{"name":"Open Source / Self-Host Advocates","weight":0.08,"painPoints":["Linear cloud-only, no self-hosted option","Plane offers self-hosting but less AI depth","Need control over data and deployment","Community contributors need free/low-cost access"],"budget":[0,500]},{"name":"Design-Heavy Product Teams","weight":0.07,"painPoints":["Linear UI inconsistencies, TypeError bugs affect design workflows","Design work not ticket-shaped - needs visual canvas","Handoffs between design and engineering create friction","Launch page assets, UI flicker, startup delays block design validation"],"budget":[500,2000]},{"name":"AI Agent Operations Leads","weight":0.06,"painPoints":["Agents treated as one-off tools not direct reports","No system for coding sessions - triage, investigate, write fix, open PR","Loops for recurring agent workflows need more triggers","Agent work not reviewable/governable in current tools"],"budget":[1000,5000]},{"name":"Performance-Obsessed Mobile Teams","weight":0.05,"painPoints":["iOS app blocks initial render on full vehicle_state sync","Startup timing not tracked - unknown how often users hit delays","UI flicker during autonomy events, ETA fluctuations","Need render-before-sync architecture, background loading"],"budget":[2000,10000]},{"name":"Legacy Jira/Asana Migrators","weight":0.08,"painPoints":["Years of Jira workflows, custom fields, complex permissions","Migration path unclear - data fidelity, link preservation","Team resistance to opinionated Linear workflows","Stakeholder licenses free in Jira, paid in Linear alternatives"],"budget":[5000,20000]},{"name":"Developer Experience / Platform Engineers","weight":0.06,"painPoints":["GraphQL API cleanup, deprecated APIs slowing integrations","Coding sessions need local env setup, run, test before PR","TypeError bugs, contentData bloat in API","Reduce latency in autonomy streams, fallback messaging"],"budget":[1000,4000]},{"name":"Product Ops / Program Managers","weight":0.05,"painPoints":["Priority inbox mixes blocking reviews with FYI notifications","No recurring workflows (Loops) for standing ceremonies","Release tracking across cycles manual","Customer feedback → actionable issues routing inconsistent"],"budget":[800,3000]},{"name":"VC-Backed High-Velocity Scale-Ups","weight":0.06,"painPoints":["Shipping velocity drops as team grows past 50 engineers","Noise reduction fails - too many notifications, unclear priorities","Cycle planning (Cycle 144 etc) becomes ceremonial not functional","Agent adoption uneven across squads - no standardized onboarding"],"budget":[4000,15000]}]
+
+event: personas
+data: {"seed":1,"personas":[{"id":0,"name":"Ava Rossi","segment":"Design-Heavy Product Teams","budget":1972,"skepticism":0.97,"techSavvy":0.28,"painPoint":"Handoffs between design and engineering create friction"},{"id":1,"name":"Omar Reyes","segment":"AI Agent Operations Leads","budget":2821,"skepticism":0.49,"techSavvy":0.14,"painPoint":"No system for coding sessions - triage, investigate, write fix, open PR"},{"id":2,"name":"Noor Kim","segment":"Series A/B Engineering-Led Companies","budget":948,"skepticism":0.39,"techSavvy":0.77,"painPoint":"Vocabulary (issues, cycles, triage) alienates PMs/designers"},{"id":3,"name":"Ava Kim","segment":"Series A/B Engineering-Led Companies","budget":2099,"skepticism":0.8,"techSavvy":0.29,"painPoint":"Jira too heavy, ClickUp too generic, Linear learning curve for new hires"},{"id":4,"name":"Kofi Nguyen","segment":"Design-Heavy Product Teams","budget":789,"skepticism":0.72,"techSavvy":0.45,"painPoint":"Launch page assets, UI flicker, startup delays block design validation"},{"id":5,"name":"Mateo Nguyen","segment":"VC-Backed High-Velocity Scale-Ups","budget":5686,"skepticism":0.32,"techSavvy":0.41,"painPoint":"Shipping velocity drops as team grows past 50 engineers"},{"id":6,"name":"Mei Rossi","segment":"Series A/B Engineering-Led Companies","budget":1080,"skepticism":0.26,"techSavvy":0.05,"painPoint":"Marketing/sales/ops find tool too developer-focused"},{"id":7,"name":"Mateo Reyes","segment":"Developer Experience / Platform Engineers","budget":3155,"skepticism":0.4,"techSavvy":0.3,"painPoint":"TypeError bugs, contentData bloat in API"},{"id":8,"name":"Tom Müller","segment":"VC-Backed High-Velocity Scale-Ups","budget":14108,"skepticism":0.83,"techSavvy":0.93,"painPoint":"Shipping velocity drops as team grows past 50 engineers"},{"id":9,"name":"Zara Novak","segment":"AI-Native Startup Founders","budget":729,"skepticism":0.51,"techSavvy":0.94,"painPoint":"Agents installed but not managed like direct reports"},{"id":10,"name":"Jonas Reyes","segment":"Series A/B Engineering-Led Companies","budget":1090,"skepticism":0.98,"techSavvy":0.16,"painPoint":"Vocabulary (issues, cycles, triage) alienates PMs/designers"},{"id":11,"name":"Omar Novak","segment":"Series A/B Engineering-Led Companies","budget":2247,"skepticism":0.51,"techSavvy":0.53,"painPoint":"Jira too heavy, ClickUp too generic, Linear learning curve for new hires"},{"id":12,"name":"Zara Novak","segment":"Legacy Jira/Asana Migrators","budget":7464,"skepticism":0.3,"techSavvy":0.89,"painPoint":"Migration path unclear - data fidelity, link preservation"},{"id":13,"name":"Jonas Rossi","segment":"Series A/B Engineering-Led Companies","budget":1514,"skepticism":0.12,"techSavvy":0.14,"painPoint":"Jira too heavy, ClickUp too generic, Linear learning curve for new hires"},{"id":14,"name":"Jonas Patel","segment":"Mid-Market Product-Led Orgs (100-500)","budget":3584,"skepticism":0.51,"techSavvy":0.52,"painPoint":"Cross-functional teams juggling marketing, ops, design alongside code"},{"id":15,"name":"Yuki Reyes","segment":"Legacy Jira/Asana Migrators","budget":19310,"skepticism":0.87,"techSavvy":0,"painPoint":"Years of Jira workflows, custom fields, complex permissions"},{"id":16,"name":"Ines Novak","segment":"AI-Native Startup Founders","budget":632,"skepticism":0.87,"techSavvy":0.09,"painPoint":"Need evidence of progress not just feeling of busy"},{"id":17,"name":"Raj Nguyen","segment":"Developer Experience / Platform Engineers","budget":1662,"skepticism":0.1,"techSavvy":0.15,"painPoint":"Coding sessions need local env setup, run, test before PR"},{"id":18,"name":"Yuki Cohen","segment":"Open Source / Self-Host Advocates","budget":156,"skepticism":0.91,"techSavvy":0.86,"painPoint":"Need control over data and deployment"},{"id":19,"name":"Mateo Haddad","segment":"Design-Heavy Product Teams","budget":961,"skepticism":0.2,"techSavvy":0.26,"painPoint":"Launch page assets, UI flicker, startup delays block design validation"},{"id":20,"name":"Noor Novak","segment":"VC-Backed High-Velocity Scale-Ups","budget":4843,"skepticism":0.04,"techSavvy":0.78,"painPoint":"Noise reduction fails - too many notifications, unclear priorities"},{"id":21,"name":"Noor Nguyen","segment":"Series A/B Engineering-Led Companies","budget":1477,"skepticism":0.89,"techSavvy":0.53,"painPoint":"Vocabulary (issues, cycles, triage) alienates PMs/designers"},{"id":22,"name":"Priya Silva","segment":"AI Agent Operations Leads","budget":3144,"skepticism":0.76,"techSavvy":0.79,"painPoint":"Agents treated as one-off tools not direct reports"},{"id":23,"name":"Jonas Patel","segment":"Series A/B Engineering-Led Companies","budget":866,"skepticism":0.33,"techSavvy":0.43,"painPoint":"Tasks and emails remain separate - communication not managed"},{"id":24,"name":"Priya Haddad","segment":"Design-Heavy Product Teams","budget":1402,"skepticism":0.01,"techSavvy":0.92,"painPoint":"Handoffs between design and engineering create friction"},{"id":25,"name":"Jonas Okafor","segment":"Open Source / Self-Host Advocates","budget":35,"skepticism":0.81,"techSavvy":0.14,"painPoint":"Need control over data and deployment"},{"id":26,"name":"Jonas Novak","segment":"Mid-Market Product-Led Orgs (100-500)","budget":5728,"skepticism":0.93,"techSavvy":0.07,"painPoint":"Cross-functional teams juggling marketing, ops, design alongside code"},{"id":27,"name":"Jonas Chen","segment":"Series A/B Engineering-Led Companies","budget":1962,"skepticism":0.38,"techSavvy":0.78,"painPoint":"Vocabulary (issues, cycles, triage) alienates PMs/designers"},{"id":28,"name":"Ines Reyes","segment":"AI-Native Startup Founders","budget":209,"skepticism":0.86,"techSavvy":0.11,"painPoint":"Need evidence of progress not just feeling of busy"},{"id":29,"name":"Kofi Haddad","segment":"Open Source / Self-Host Advocates","budget":356,"skepticism":0.13,"techSavvy":0.28,"painPoint":"Community contributors need free/low-cost access"},{"id":30,"name":"Kofi Chen","segment":"Design-Heavy Product Teams","budget":745,"skepticism":0.62,"techSavvy":0.24,"painPoint":"Linear UI inconsistencies, TypeError bugs affect design workflows"},{"id":31,"name":"Sofia Chen","segment":"Design-Heavy Product Teams","budget":601,"skepticism":0.03,"techSavvy":0.4,"painPoint":"Handoffs between design and engineering create friction"},{"id":32,"name":"Raj Patel","segment":"Design-Heavy Product Teams","budget":1511,"skepticism":0.96,"techSavvy":0.02,"painPoint":"Launch page assets, UI flicker, startup delays block design validation"},{"id":33,"name":"Ava Nguyen","segment":"Product Ops / Program Managers","budget":1991,"skepticism":0.56,"techSavvy":0.37,"painPoint":"Priority inbox mixes blocking reviews with FYI notifications"},{"id":34,"name":"Jonas Haddad","segment":"AI-Native Startup Founders","budget":209,"skepticism":0.51,"techSavvy":0.55,"painPoint":"Agents installed but not managed like direct reports"},{"id":35,"name":"Elena Nguyen","segment":"Developer Experience / Platform Engineers","budget":1196,"skepticism":0.4,"techSavvy":0.74,"painPoint":"GraphQL API cleanup, deprecated APIs slowing integrations"},{"id":36,"name":"Raj Okafor","segment":"Developer Experience / Platform Engineers","budget":1551,"skepticism":0.7,"techSavvy":0.03,"painPoint":"Reduce latency in autonomy streams, fallback messaging"},{"id":37,"name":"Priya Cohen","segment":"VC-Backed High-Velocity Scale-Ups","budget":13351,"skepticism":0.63,"techSavvy":0.47,"painPoint":"Cycle planning (Cycle 144 etc) becomes ceremonial not functional"},{"id":38,"name":"Mateo Okafor","segment":"Enterprise Platform Teams (500-2000)","budget":23953,"skepticism":0.65,"techSavvy":0.05,"painPoint":"Self-hosting/data residency requirements"},{"id":39,"name":"Noor Okafor","segment":"Open Source / Self-Host Advocates","budget":477,"skepticism":0.27,"techSavvy":0.01,"painPoint":"Plane offers self-hosting but less AI depth"},{"id":40,"name":"Ines Patel","segment":"Mid-Market Product-Led Orgs (100-500)","budget":5399,"skepticism":0,"techSavvy":0.63,"painPoint":"Cross-functional teams juggling marketing, ops, design alongside code"},{"id":41,"name":"Ines Silva","segment":"Legacy Jira/Asana Migrators","budget":14713,"skepticism":0.89,"techSavvy":0.59,"painPoint":"Team resistance to opinionated Linear workflows"},{"id":42,"name":"Sofia Rossi","segment":"Mid-Market Product-Led Orgs (100-500)","budget":6923,"skepticism":0.87,"techSavvy":0.39,"painPoint":"Stakeholder visibility limited - read-only seats cost extra"},{"id":43,"name":"Mateo Okafor","segment":"AI Agent Operations Leads","budget":4570,"skepticism":0.38,"techSavvy":0.95,"painPoint":"Loops for recurring agent workflows need more triggers"},{"id":44,"name":"Omar Okafor","segment":"Design-Heavy Product Teams","budget":1642,"skepticism":0.63,"techSavvy":0.77,"painPoint":"Linear UI inconsistencies, TypeError bugs affect design workflows"},{"id":45,"name":"Raj Nguyen","segment":"AI-Native Startup Founders","budget":333,"skepticism":0.32,"techSavvy":0.75,"painPoint":"Scattered product ops across chats, docs, vague weekly calls"},{"id":46,"name":"Ava Novak","segment":"Series A/B Engineering-Led Companies","budget":2861,"skepticism":0.32,"techSavvy":0.41,"painPoint":"Marketing/sales/ops find tool too developer-focused"},{"id":47,"name":"Jonas Nguyen","segment":"Series A/B Engineering-Led Companies","budget":2258,"skepticism":0.47,"techSavvy":0.1,"painPoint":"Vocabulary (issues, cycles, triage) alienates PMs/designers"},{"id":48,"name":"Elena Cohen","segment":"Product Ops / Program Managers","budget":2993,"skepticism":0.61,"techSavvy":0.2,"painPoint":"Release tracking across cycles manual"},{"id":49,"name":"Sofia Cohen","segment":"Design-Heavy Product Teams","budget":1051,"skepticism":0.91,"techSavvy":0.05,"painPoint":"Design work not ticket-shaped - needs visual canvas"},{"id":50,"name":"Ava Rossi","segment":"Series A/B Engineering-Led Companies","budget":1813,"skepticism":0.8,"techSavvy":0.31,"painPoint":"Tasks and emails remain separate - communication not managed"},{"id":51,"name":"Omar Silva","segment":"Product Ops / Program Managers","budget":2019,"skepticism":0.54,"techSavvy":0.37,"painPoint":"Customer feedback → actionable issues routing inconsistent"},{"id":52,"name":"Kofi Kim","segment":"Design-Heavy Product Teams","budget":561,"skepticism":0.4,"techSavvy":0.19,"painPoint":"Handoffs between design and engineering create friction"},{"id":53,"name":"Kofi Haddad","segment":"AI-Native Startup Founders","budget":537,"skepticism":0.23,"techSavvy":0.14,"painPoint":"Need evidence of progress not just feeling of busy"},{"id":54,"name":"Yuki Patel","segment":"Mid-Market Product-Led Orgs (100-500)","budget":5929,"skepticism":0.08,"techSavvy":0.39,"painPoint":"Cross-functional teams juggling marketing, ops, design alongside code"},{"id":55,"name":"Kofi Silva","segment":"Legacy Jira/Asana Migrators","budget":12268,"skepticism":0,"techSavvy":0.15,"painPoint":"Migration path unclear - data fidelity, link preservation"},{"id":56,"name":"Ines Haddad","segment":"Open Source / Self-Host Advocates","budget":304,"skepticism":0.52,"techSavvy":0.4,"painPoint":"Plane offers self-hosting but less AI depth"},{"id":57,"name":"Sofia Patel","segment":"AI-Native Startup Founders","budget":500,"skepticism":0.03,"techSavvy":0.31,"painPoint":"Scattered product ops across chats, docs, vague weekly calls"},{"id":58,"name":"Ines Reyes","segment":"Design-Heavy Product Teams","budget":1227,"skepticism":0.8,"techSavvy":0.49,"painPoint":"Linear UI inconsistencies, TypeError bugs affect design workflows"},{"id":59,"name":"Tom Chen","segment":"Series A/B Engineering-Led Companies","budget":1562,"skepticism":0.84,"techSavvy":0.86,"painPoint":"Vocabulary (issues, cycles, triage) alienates PMs/designers"},{"id":60,"name":"Zara Patel","segment":"Performance-Obsessed Mobile Teams","budget":3440,"skepticism":0.06,"techSavvy":0.18,"painPoint":"UI flicker during autonomy events, ETA fluctuations"},{"id":61,"name":"Kofi Kim","segment":"Enterprise Platform Teams (500-2000)","budget":13615,"skepticism":0.63,"techSavvy":0.78,"painPoint":"Agent governance at scale - 75%+ workspaces have agents but no management framework"},{"id":62,"name":"Tom Rossi","segment":"AI-Native Startup Founders","budget":411,"skepticism":0.87,"techSavvy":0.51,"painPoint":"Need evidence of progress not just feeling of busy"},{"id":63,"name":"Zara Rossi","segment":"Mid-Market Product-Led Orgs (100-500)","budget":7245,"skepticism":0.22,"techSavvy":0.89,"painPoint":"Linear great for engineering but creative/product-strategy work not ticket-shaped"},{"id":64,"name":"Noor Novak","segment":"Performance-Obsessed Mobile Teams","budget":4582,"skepticism":0.69,"techSavvy":0.37,"painPoint":"UI flicker during autonomy events, ETA fluctuations"},{"id":65,"name":"Priya Müller","segment":"Enterprise Platform Teams (500-2000)","budget":19883,"skepticism":0.98,"techSavvy":0.07,"painPoint":"Agent governance at scale - 75%+ workspaces have agents but no management framework"},{"id":66,"name":"Liam Haddad","segment":"Mid-Market Product-Led Orgs (100-500)","budget":6322,"skepticism":0.38,"techSavvy":0.53,"painPoint":"Linear great for engineering but creative/product-strategy work not ticket-shaped"},{"id":67,"name":"Tom Müller","segment":"AI Agent Operations Leads","budget":1392,"skepticism":0.33,"techSavvy":0.29,"painPoint":"Agents treated as one-off tools not direct reports"},{"id":68,"name":"Ava Chen","segment":"Enterprise Platform Teams (500-2000)","budget":13596,"skepticism":0.41,"techSavvy":0.28,"painPoint":"Self-hosting/data residency requirements"},{"id":69,"name":"Ava Patel","segment":"Series A/B Engineering-Led Companies","budget":2011,"skepticism":0.98,"techSavvy":0.8,"painPoint":"Vocabulary (issues, cycles, triage) alienates PMs/designers"},{"id":70,"name":"Sofia Patel","segment":"Enterprise Platform Teams (500-2000)","budget":9210,"skepticism":0.64,"techSavvy":0.36,"painPoint":"Customizable enterprise tracking vs. Linear's constraints"},{"id":71,"name":"Tom Haddad","segment":"Performance-Obsessed Mobile Teams","budget":8079,"skepticism":0.89,"techSavvy":0.99,"painPoint":"Need render-before-sync architecture, background loading"},{"id":72,"name":"Elena Haddad","segment":"Legacy Jira/Asana Migrators","budget":8267,"skepticism":0.9,"techSavvy":0.74,"painPoint":"Years of Jira workflows, custom fields, complex permissions"},{"id":73,"name":"Zara Patel","segment":"Series A/B Engineering-Led Companies","budget":2488,"skepticism":0.01,"techSavvy":0.64,"painPoint":"Marketing/sales/ops find tool too developer-focused"},{"id":74,"name":"Mateo Chen","segment":"AI-Native Startup Founders","budget":635,"skepticism":0.07,"techSavvy":0.89,"painPoint":"Scattered product ops across chats, docs, vague weekly calls"},{"id":75,"name":"Ava Patel","segment":"Mid-Market Product-Led Orgs (100-500)","budget":6421,"skepticism":0.87,"techSavvy":0.92,"painPoint":"Cross-functional teams juggling marketing, ops, design alongside code"},{"id":76,"name":"Jonas Patel","segment":"Product Ops / Program Managers","budget":1491,"skepticism":0.05,"techSavvy":0.81,"painPoint":"Priority inbox mixes blocking reviews with FYI notifications"},{"id":77,"name":"Tom Novak","segment":"AI Agent Operations Leads","budget":2618,"skepticism":0.95,"techSavvy":0.87,"painPoint":"Agents treated as one-off tools not direct reports"},{"id":78,"name":"Liam Rossi","segment":"Legacy Jira/Asana Migrators","budget":10398,"skepticism":0.16,"techSavvy":0.1,"painPoint":"Years of Jira workflows, custom fields, complex permissions"},{"id":79,"name":"Kofi Okafor","segment":"Mid-Market Product-Led Orgs (100-500)","budget":7725,"skepticism":0.33,"techSavvy":0.05,"painPoint":"Linear great for engineering but creative/product-strategy work not ticket-shaped"},{"id":80,"name":"Priya Chen","segment":"Series A/B Engineering-Led Companies","budget":2201,"skepticism":0.96,"techSavvy":0.97,"painPoint":"Jira too heavy, ClickUp too generic, Linear learning curve for new hires"},{"id":81,"name":"Kofi Silva","segment":"Legacy Jira/Asana Migrators","budget":18348,"skepticism":0.06,"techSavvy":0.08,"painPoint":"Years of Jira workflows, custom fields, complex permissions"},{"id":82,"name":"Zara Patel","segment":"Mid-Market Product-Led Orgs (100-500)","budget":4458,"skepticism":0.36,"techSavvy":0.45,"painPoint":"Linear great for engineering but creative/product-strategy work not ticket-shaped"},{"id":83,"name":"Elena Müller","segment":"Open Source / Self-Host Advocates","budget":348,"skepticism":0.71,"techSavvy":0.06,"painPoint":"Plane offers self-hosting but less AI depth"},{"id":84,"name":"Omar Cohen","segment":"Enterprise Platform Teams (500-2000)","budget":19962,"skepticism":0.21,"techSavvy":0.96,"painPoint":"Self-hosting/data residency requirements"},{"id":85,"name":"Noor Reyes","segment":"Product Ops / Program Managers","budget":849,"skepticism":0.47,"techSavvy":0.15,"painPoint":"Release tracking across cycles manual"},{"id":86,"name":"Sofia Okafor","segment":"AI-Native Startup Founders","budget":274,"skepticism":0.34,"techSavvy":0.45,"painPoint":"Need evidence of progress not just feeling of busy"},{"id":87,"name":"Liam Okafor","segment":"Design-Heavy Product Teams","budget":909,"skepticism":0.69,"techSavvy":0.82,"painPoint":"Design work not ticket-shaped - needs visual canvas"},{"id":88,"name":"Ines Nguyen","segment":"Enterprise Platform Teams (500-2000)","budget":9220,"skepticism":0.95,"techSavvy":0.12,"painPoint":"Deep agile machinery needed but Linear opinionated speed preferred"},{"id":89,"name":"Sofia Patel","segment":"Open Source / Self-Host Advocates","budget":50,"skepticism":0.36,"techSavvy":0.67,"painPoint":"Need control over data and deployment"},{"id":90,"name":"Kofi Müller","segment":"Mid-Market Product-Led Orgs (100-500)","budget":7808,"skepticism":0.65,"techSavvy":0.91,"painPoint":"Stakeholder visibility limited - read-only seats cost extra"},{"id":91,"name":"Priya Cohen","segment":"Performance-Obsessed Mobile Teams","budget":8366,"skepticism":0.5,"techSavvy":0.33,"painPoint":"Need render-before-sync architecture, background loading"},{"id":92,"name":"Tom Chen","segment":"Product Ops / Program Managers","budget":2654,"skepticism":0.48,"techSavvy":0.4,"painPoint":"Priority inbox mixes blocking reviews with FYI notifications"},{"id":93,"name":"Elena Silva","segment":"Enterprise Platform Teams (500-2000)","budget":16654,"skepticism":0.98,"techSavvy":0.55,"painPoint":"Deep agile machinery needed but Linear opinionated speed preferred"},{"id":94,"name":"Kofi Müller","segment":"VC-Backed High-Velocity Scale-Ups","budget":4175,"skepticism":0.78,"techSavvy":0.81,"painPoint":"Agent adoption uneven across squads - no standardized onboarding"},{"id":95,"name":"Tom Patel","segment":"Product Ops / Program Managers","budget":871,"skepticism":0.69,"techSavvy":0.46,"painPoint":"Customer feedback → actionable issues routing inconsistent"},{"id":96,"name":"Sofia Silva","segment":"Open Source / Self-Host Advocates","budget":373,"skepticism":0.18,"techSavvy":0.52,"painPoint":"Plane offers self-hosting but less AI depth"},{"id":97,"name":"Omar Okafor","segment":"Series A/B Engineering-Led Companies","budget":879,"skepticism":0.41,"techSavvy":0.06,"painPoint":"Marketing/sales/ops find tool too developer-focused"},{"id":98,"name":"Yuki Kim","segment":"Series A/B Engineering-Led Companies","budget":2692,"skepticism":0.55,"techSavvy":0.96,"painPoint":"Vocabulary (issues, cycles, triage) alienates PMs/designers"},{"id":99,"name":"Kofi Novak","segment":"Mid-Market Product-Led Orgs (100-500)","budget":4922,"skepticism":0.58,"techSavvy":0.45,"painPoint":"Linear great for engineering but creative/product-strategy work not ticket-shaped"}]}
+
+event: reaction
+data: {"id":12,"verdict":"bounce","dropSection":0,"objection":"No migration details","quote":"I’m concerned there’s no clear plan for preserving my existing links and data."}
+
+event: reaction
+data: {"id":4,"verdict":"buy","dropSection":-1,"objection":"","quote":"Finally, a tool that eliminates UI flicker and speeds up iOS startup so I can validate designs without delays."}
+
+event: reaction
+data: {"id":7,"verdict":"buy","dropSection":-1,"objection":"no objection","quote":"I'm sold – finally a tool that treats those stubborn TypeError bugs and API bloat as first‑class issues."}
+
+event: reaction
+data: {"id":13,"verdict":"buy","dropSection":-1,"objection":"learning curve for new hires not addressed","quote":"I need a tool that my team can adopt quickly without extensive onboarding."}
+
+event: reaction
+data: {"id":10,"verdict":"bounce","dropSection":2,"objection":"buzzword overload","quote":"Jesus Christ, why are they spouting all that nonsense again?"}
+
+event: reaction
+data: {"id":6,"verdict":"bounce","dropSection":1,"objection":"Developer-centric","quote":"I need a tool sales and ops can actually adopt without being developer‑first."}
+
+event: reaction
+data: {"id":5,"verdict":"buy","dropSection":-1,"objection":"no explicit pricing","quote":"I like how they tackle iOS startup slowness, but I wish they showed the cost up front."}
+
+event: reaction
+data: {"id":14,"verdict":"maybe","dropSection":3,"objection":"No clear pricing","quote":"I need to know the cost before I can consider this."}
+
+event: reaction
+data: {"id":2,"verdict":"maybe","dropSection":5,"objection":"jargon overload alienates non-dev stakeholders","quote":"I’m tired of wading through code snippets when I just need clear value."}
+
+event: reaction
+data: {"id":8,"verdict":"maybe","dropSection":2,"objection":"Needs clearer ROI for scaling","quote":"I’m intrigued but need proof this actually prevents velocity loss at 50+ engineers."}
+
+event: reaction
+data: {"id":9,"verdict":"maybe","dropSection":-1,"objection":"Missing direct-agent management","quote":"I want to assign, track, and give feedback to my AI agents just like I do with human team members."}
+
+event: reaction
+data: {"id":3,"verdict":"maybe","dropSection":-1,"objection":"Learning curve for new hires not addressed","quote":"I’m still not sure if the AI hype is worth the onboarding hassle."}
+
+event: reaction
+data: {"id":11,"verdict":"maybe","dropSection":3,"objection":"Performance concerns about iOS startup","quote":"Feels like we could render sooner and load the rest in the background."}
+
+event: reaction
+data: {"id":0,"verdict":"bounce","dropSection":0,"objection":"No clear design‑engineer handoff solution","quote":"I’m doubtful this will actually reduce the hand‑off friction between design and engineering at a price I can afford."}
+
+event: reaction
+data: {"id":15,"verdict":"maybe","dropSection":-1,"objection":"Unclear Jira migration path","quote":"I need to see how this maps my existing Jira workflows."}
+
+event: reaction
+data: {"id":1,"verdict":"buy","dropSection":-1,"objection":"price okay","quote":"At $2.8k/mo, Linear finally gives us a true AI‑driven coding session workflow that triages, investigates, writes the fix, and opens the PR—exactly the missing piece for our ops team."}
+
+event: reaction
+data: {"id":18,"verdict":"bounce","dropSection":0,"objection":"No self‑host option, data control not provided","quote":"I need to control where my data lives, and Linear is purely SaaS."}
+
+event: reaction
+data: {"id":21,"verdict":"bounce","dropSection":2,"objection":"Jargon overload alienates PMs","quote":"I’m turned off by all the buzzwordy fluff; it makes the tool feel like marketing rather than something I can actually use."}
+
+event: reaction
+data: {"id":16,"verdict":"maybe","dropSection":2,"objection":"Evidence of actual progress unclear amid marketing fluff","quote":"I need to see concrete, measurable progress, not just glossy promises."}
+
+event: reaction
+data: {"id":23,"verdict":"maybe","dropSection":-1,"objection":"Unclear pricing for budget","quote":"I like the idea but need to know if it fits my $866/mo ceiling."}
+
+event: reaction
+data: {"id":17,"verdict":"buy","dropSection":-1,"objection":"N/A","quote":"Finally, a tool that actually lets me spin up a local environment and test before I push that PR."}
+
+event: reaction
+data: {"id":22,"verdict":"maybe","dropSection":-1,"objection":"Agents not clearly direct reports","quote":"I need AI teammates that feel like direct reports, not just throwaway tools."}
+
+event: reaction
+data: {"id":19,"verdict":"buy","dropSection":-1,"objection":"price not shown","quote":"If it actually eliminates those startup delays, I'm all in."}
+
+event: reaction
+data: {"id":31,"verdict":"buy","dropSection":-1,"objection":"price not clear","quote":"Finally a tool that stops me from translating my designs into engineering tickets manually."}
+
+event: reaction
+data: {"id":32,"verdict":"buy","dropSection":-1,"objection":"price fits budget","quote":"At $1511/mo I can afford the speed gains for my team."}
+
+event: reaction
+data: {"id":20,"verdict":"maybe","dropSection":2,"objection":"Unclear how it solves notification overload","quote":"Honestly, I need more proof this actually cuts the noise I hate."}
+
+event: reaction
+data: {"id":33,"verdict":"buy","dropSection":-1,"objection":"pricey for early stage","quote":"$1991/mo is a stretch, but finally a priority inbox that actually filters my alerts."}
+
+event: reaction
+data: {"id":29,"verdict":"bounce","dropSection":0,"objection":"No pricing or community access info","quote":"This doesn't address my need for affordable, open-source-friendly access."}
+
+event: reaction
+data: {"id":28,"verdict":"maybe","dropSection":2,"objection":"fluffy promises, not clear ROI","quote":"I need to see real numbers, not just buzzwords."}
+
+event: reaction
+data: {"id":25,"verdict":"bounce","dropSection":0,"objection":"No self-hosting, data locked in SaaS","quote":"I need to own my data, not trust a third-party SaaS."}
+
+event: reaction
+data: {"id":24,"verdict":"bounce","dropSection":2,"objection":"No mention of design‑engineer handoff pain","quote":"I need a tool that eases hand‑offs, not just speeds up launches."}
+
+event: reaction
+data: {"id":26,"verdict":"maybe","dropSection":1,"objection":"Unclear pricing and insufficient cross‑team collaboration focus","quote":"I need a tool that unifies marketing, ops, and design workflows without forcing engineers into AI hype."}
+
+event: reaction
+data: {"id":30,"verdict":"maybe","dropSection":5,"objection":"UI inconsistencies and TypeError bugs remain unresolved","quote":"I’m skeptical that Linear will fix these DESIGN‑WORKFLOW bugs soon enough for my team."}
+
+event: reaction
+data: {"id":34,"verdict":"buy","dropSection":-1,"objection":"No clear pricing details","quote":"I’m sold—Linear finally lets my AI agents feel like true direct reports, and fits my $209/mo budget."}
+
+event: reaction
+data: {"id":35,"verdict":"maybe","dropSection":7,"objection":"No clear GraphQL API cleanup promise","quote":"I need a clean GraphQL API, not just speed talks."}
+
+event: reaction
+data: {"id":27,"verdict":"bounce","dropSection":1,"objection":"Jargon alienates non‑engineers","quote":"I’m fed up decoding 'triage' and 'issue' speak before I can even see if this tool actually helps me ship faster."}
+
+event: reaction
+data: {"id":45,"verdict":"buy","dropSection":-1,"objection":"None","quote":"Finally, a tool that unifies our fragmented workflows and lets AI agents actually own tasks."}
+
+event: reaction
+data: {"id":39,"verdict":"maybe","dropSection":5,"objection":"No clear self-host pricing or option","quote":"I need to know if I can host it myself without paying extra for AI features."}
+
+event: reaction
+data: {"id":37,"verdict":"bounce","dropSection":0,"objection":"No clear cycle planning solution","quote":"I need cycle planning to be functional, not just ceremonial."}
+
+event: reaction
+data: {"id":38,"verdict":"bounce","dropSection":0,"objection":"No self-hosting or data residency info","quote":"I need a solution I can host on-prem with strict data residency guarantees, and this page never mentions it."}
+
+event: reaction
+data: {"id":42,"verdict":"bounce","dropSection":0,"objection":"Stakeholder visibility limited; read‑only seats cost extra – not addressed on the page","quote":"I need clear, affordable visibility for non‑editing stakeholders, but the pricing copy never mentions read‑only seats or fair pricing."}
+
+event: reaction
+data: {"id":40,"verdict":"buy","dropSection":-1,"objection":"Budget sufficient","quote":"At $5.4k per month, Linear finally gives our cross‑functional teams the speed and AI workflow they need."}
+
+event: reaction
+data: {"id":46,"verdict":"bounce","dropSection":1,"objection":"Too developer‑focused","quote":"I need a tool that marketers and ops can use without feeling like I'm wading through code."}
+
+event: reaction
+data: {"id":44,"verdict":"maybe","dropSection":-1,"objection":"UI inconsistencies not fully resolved","quote":"The performance fixes look promising, but I need more concrete evidence that the UI inconsistencies are actually being fixed."}
+
+event: reaction
+data: {"id":43,"verdict":"buy","dropSection":-1,"objection":"N/A","quote":"Linear finally gives me the loop triggers I need—exactly what I was after."}
+
+event: reaction
+data: {"id":50,"verdict":"maybe","dropSection":0,"objection":"Communication isolation not addressed","quote":"I need my tasks and emails isolated, and this doesn't solve that."}
+
+event: reaction
+data: {"id":48,"verdict":"maybe","dropSection":1,"objection":"No clear release‑tracking features for manual cycles","quote":"I need a tool that actually surfaces release milestones across sprints, not just generic planning fluff."}
+
+event: reaction
+data: {"id":52,"verdict":"maybe","dropSection":2,"objection":"No clear handoff workflow","quote":"I need a tool that bridges design and dev seamlessly, not just buzzwords."}
+
+event: reaction
+data: {"id":53,"verdict":"maybe","dropSection":5,"objection":"marketing fluff without concrete proof","quote":"I need to see real progress, not just promises of AI agents."}
+
+event: reaction
+data: {"id":41,"verdict":"maybe","dropSection":2,"objection":"Team resistance to Linear's opinionated workflows","quote":"I love the speed fix, but unless Linear lets us tailor its workflow to our team's habits, we'll keep pushing back."}
+
+event: reaction
+data: {"id":47,"verdict":"bounce","dropSection":4,"objection":"jargon overload","quote":"I don't want my PMs drowning in code‑centric talk."}
+
+event: reaction
+data: {"id":51,"verdict":"buy","dropSection":-1,"objection":"None","quote":"Finally, a tool that takes my Slack feedback and automates issue routing—exactly what I need."}
+
+event: reaction
+data: {"id":55,"verdict":"bounce","dropSection":0,"objection":"No migration guidance","quote":"I need clear migration steps, but this page just talks about AI features without any migration path."}
+
+event: reaction
+data: {"id":54,"verdict":"maybe","dropSection":-1,"objection":"price not disclosed","quote":"Looks promising but I need to see the actual cost before committing."}
+
+event: reaction
+data: {"id":49,"verdict":"bounce","dropSection":2,"objection":"No visual canvas for design work","quote":"I need a visual canvas to map design concepts, not just a ticket list."}
+
+event: reaction
+data: {"id":62,"verdict":"maybe","dropSection":2,"objection":"Too fluffy marketing, lacking concrete ROI proof","quote":"I need to see clear results, not just buzzwords."}
+
+event: reaction
+data: {"id":59,"verdict":"maybe","dropSection":-1,"objection":"Unclear pricing","quote":"I need to know the exact cost before I can commit."}
+
+event: reaction
+data: {"id":57,"verdict":"maybe","dropSection":-1,"objection":"Unclear pricing","quote":"At $500/mo max, I need to see the cost to decide."}
+
+event: reaction
+data: {"id":56,"verdict":"maybe","dropSection":-1,"objection":"Unclear self-host pricing","quote":"I’m intrigued by the AI but need to know if Linear can be self-hosted and fit my $304/mo budget."}
+
+event: reaction
+data: {"id":61,"verdict":"maybe","dropSection":5,"objection":"No clear governance framework for agents","quote":"I need to see how this actually manages and governs agents at scale, not just promises to build them."}
+
+event: reaction
+data: {"id":36,"verdict":"bounce","dropSection":2,"objection":"Ignores autonomy stream latency and fallback messaging","quote":"I need concrete speed gains on our autonomous pipelines, not just generic performance claims."}
+
+event: reaction
+data: {"id":64,"verdict":"buy","dropSection":-1,"objection":"price unclear","quote":"Finally, an app that doesn't stall on startup while we sync vehicle state."}
+
+event: reaction
+data: {"id":69,"verdict":"bounce","dropSection":-1,"objection":"Vocabulary alienates PMs/designers","quote":"I need language that speaks to PMs and designers, not just engineers."}
+
+event: reaction
+data: {"id":66,"verdict":"maybe","dropSection":2,"objection":"Too focused on tickets, not creative/product strategy","quote":"I like the engineering features, but Linear feels too ticket‑centric for the strategic, creative work I lead."}
+
+event: reaction
+data: {"id":65,"verdict":"maybe","dropSection":-1,"objection":"Missing agent governance framework","quote":"I still haven't seen how you'll manage agents at scale."}
+
+event: reaction
+data: {"id":58,"verdict":"maybe","dropSection":-1,"objection":"UI glitches still linger","quote":"I like the roadmap, but those UI bugs still make me pause before signing up."}
+
+event: reaction
+data: {"id":67,"verdict":"maybe","dropSection":2,"objection":"agents still feel like tools","quote":"I need an agent that feels like a report, not a disposable tool."}
+
+event: reaction
+data: {"id":60,"verdict":"maybe","dropSection":-1,"objection":"price not disclosed","quote":"I need to see the exact cost before committing."}
+
+event: reaction
+data: {"id":68,"verdict":"bounce","dropSection":0,"objection":"No self-hosting or data residency provisions","quote":"I need a solution that can be self-hosted and guarantee data residency, and this page offers none of that."}
+
+event: reaction
+data: {"id":70,"verdict":"maybe","dropSection":2,"objection":"Limited customization","quote":"I’m intrigued by the speed, but I need deeper, customizable tracking that Linear’s standard workflow doesn’t provide."}
+
+event: reaction
+data: {"id":71,"verdict":"buy","dropSection":-1,"objection":"none","quote":"Finally, an app that launches instantly—exactly what we need."}
+
+event: reaction
+data: {"id":63,"verdict":"maybe","dropSection":5,"objection":"Too engineering‑centric / ticket‑driven","quote":"I’m excited about AI helpers, but I need a tool that helps shape product strategy, not just track tickets."}
+
+event: reaction
+data: {"id":78,"verdict":"bounce","dropSection":0,"objection":"No mention of migrating legacy Jira workflows, custom fields, or complex permissions","quote":"I’m looking for a tool that can faithfully reproduce my years‑old Jira configs, not just a shiny AI‑first UI."}
+
+event: reaction
+data: {"id":80,"verdict":"maybe","dropSection":6,"objection":"Learning curve for new hires feels steep","quote":"Honestly, I love the speed but onboarding new engineers onto this feels like a wall."}
+
+event: reaction
+data: {"id":75,"verdict":"maybe","dropSection":-1,"objection":"price unclear","quote":"I need to know the exact cost before committing."}
+
+event: reaction
+data: {"id":83,"verdict":"bounce","dropSection":0,"objection":"No self-hosting option","quote":"I need a product I can run on my own servers, not another SaaS."}
+
+event: reaction
+data: {"id":72,"verdict":"bounce","dropSection":1,"objection":"No Jira migration or custom fields support","quote":"I need a tool that can lift our Jira workflows, custom fields, and permission granularity—not a showcase of UI speed."}
+
+event: reaction
+data: {"id":73,"verdict":"bounce","dropSection":5,"objection":"Too developer-centric, lacks marketing/ops focus","quote":"Honestly, this feels like a dev tool masquerading as a product platform; I need something that speaks to my marketing and ops teams, not just engineers."}
+
+event: reaction
+data: {"id":76,"verdict":"buy","dropSection":-1,"objection":"Perfect fit","quote":"Finally, an inbox that doesn't drown my reviews in FYI noise."}
+
+event: reaction
+data: {"id":86,"verdict":"maybe","dropSection":-1,"objection":"price unclear","quote":"I need to know the exact cost before committing, even if the features look promising."}
+
+event: reaction
+data: {"id":74,"verdict":"buy","dropSection":-1,"objection":"fits budget","quote":"Finally, a tool that turns my Slack chatter into actual tickets without manual work."}
+
+event: reaction
+data: {"id":81,"verdict":"bounce","dropSection":0,"objection":"No Jira migration/import features","quote":"I need a tool that can seamlessly import my existing Jira workflows and preserve custom fields and permission schemes."}
+
+event: reaction
+data: {"id":87,"verdict":"bounce","dropSection":0,"objection":"No visual canvas focus","quote":"This reads like a generic issue tracker, not the visual design workspace my team needs."}
+
+event: reaction
+data: {"id":85,"verdict":"bounce","dropSection":3,"objection":"Missing manual release‑tracking across cycles","quote":"I need a way to manually track releases across cycles, and this page doesn’t show that."}
+
+event: reaction
+data: {"id":77,"verdict":"maybe","dropSection":5,"objection":"agents not direct reports","quote":"I need Linear to treat agents as first‑class direct reports, not just plug‑and‑play tools."}
+
+event: reaction
+data: {"id":79,"verdict":"maybe","dropSection":5,"objection":"AI focus misses creative workflow needs","quote":"I love Linear for tracking tickets, but it doesn't fit the fluid, idea-driven work my product team does."}
+
+event: reaction
+data: {"id":82,"verdict":"maybe","dropSection":3,"objection":"Not tailored for product-strategy work","quote":"I need a tool that shapes product vision, not just tracks tickets."}
+
+event: reaction
+data: {"id":84,"verdict":"bounce","dropSection":0,"objection":"No self-hosting option","quote":"I need a solution I can deploy on‑prem to meet data‑ residency rules, and this page doesn't even mention it."}
+
+event: reaction
+data: {"id":91,"verdict":"buy","dropSection":-1,"objection":"Price seems steep for incremental gains","quote":"I need concrete proof that this architecture actually speeds up startup before I’ll commit."}
+
+event: reaction
+data: {"id":94,"verdict":"bounce","dropSection":0,"objection":"No standardized onboarding","quote":"I can't justify spending $4k/mo when onboarding gaps will still cause adoption issues."}
+
+event: reaction
+data: {"id":88,"verdict":"maybe","dropSection":5,"objection":"Unclear enterprise pricing & insufficient agile machinery details.","quote":"I need concrete integration pathways, not just AI hype."}
+
+event: reaction
+data: {"id":95,"verdict":"buy","dropSection":-1,"objection":"Cost could exceed my $871/mo budget","quote":"The platform looks solid but at $871/mo it pushes my budget."}
+
+event: reaction
+data: {"id":89,"verdict":"bounce","dropSection":5,"objection":"no self‑host option, data stays in the cloud","quote":"I need to host it myself to keep my data private."}
+
+event: reaction
+data: {"id":90,"verdict":"bounce","dropSection":0,"objection":"No pricing or seat cost info","quote":"Read-only seats cost extra—where's the pricing?"}
+
+event: reaction
+data: {"id":96,"verdict":"bounce","dropSection":0,"objection":"No self‑hosting option","quote":"I need to host it myself."}
+
+event: reaction
+data: {"id":97,"verdict":"bounce","dropSection":1,"objection":"Too dev-focused for non-tech teams","quote":"Honestly, this is just a developer playground, not what we need."}
+
+event: reaction
+data: {"id":92,"verdict":"buy","dropSection":-1,"objection":"Price unclear but within budget","quote":"Finally a tool that actually separates real blockers from noise, and it fits my budget."}
+
+event: reaction
+data: {"id":99,"verdict":"maybe","dropSection":6,"objection":"Too dev‑centric, not product‑strategy focused","quote":"I need a tool that speaks product, not just code."}
+
+event: reaction
+data: {"id":93,"verdict":"maybe","dropSection":2,"objection":"Heavy marketing fluff, lacking concrete deep‑agile mechanics","quote":"I need speed that actually solves our workflow bottlenecks, not just promises."}
+
+event: reaction
+data: {"id":98,"verdict":"bounce","dropSection":1,"objection":"jargon alienates PMs/designers","quote":"I need tools that speak my team's language, not just engineer‑centric terms."}
+
+event: done
+data: {}
+

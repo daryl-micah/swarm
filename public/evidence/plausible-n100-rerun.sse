@@ -1,0 +1,309 @@
+event: segments
+data: [{"name":"Solo Founder / Micro-SaaS","weight":14,"painPoints":["GA4 complexity requires training they don't have time for","Cookie banner compliance overhead for EU visitors","Need revenue attribution without engineering effort","Script bloat slowing down their lightweight marketing site"],"budget":[9,29]},{"name":"Bootstrapped Startup Team (2-10)","weight":12,"painPoints":["GA4 event setup requires dedicated analytics engineering","Need funnel visibility to optimize activation/retention","Want AI traffic source tracking (ChatGPT, Perplexity, Claude)","Team access controls without enterprise price tag"],"budget":[29,79]},{"name":"Growth Marketing Lead at Scale-up","weight":10,"painPoints":["UTM/campaign attribution fragmented across tools","GA4 real-time dashboard refreshes too slowly for daily standups","Need codeless goal creation for rapid experiment iteration","Channel grouping (Paid Search, Affiliates) requires manual config in GA"],"budget":[79,199]},{"name":"Agency / Fractional CMO Managing 10+ Client Sites","weight":11,"painPoints":["Consolidated multi-site dashboard missing in GA4","Client reporting via email/Slack requires manual export","Role-based access for clients vs internal team","White-label sharing links for stakeholder transparency"],"budget":[49,149]},{"name":"Content Publisher / Media Site (1M+ pv/mo)","weight":9,"painPoints":["Scroll depth tracking requires custom GTM tags in GA","Search Console integration is separate property in GA","AI referrer traffic (LLMs) invisible in standard reports","Bot/spam referrer pollution inflates vanity metrics"],"budget":[99,299]},{"name":"DTC E-commerce Brand","weight":8,"painPoints":["Revenue attribution to content pages requires custom data layer","File download / outbound click tracking needs dev sprint","Funnel drop-off analysis for checkout flow is manual in GA4","Privacy compliance adds legal review cycles for each pixel"],"budget":[79,249]},{"name":"Privacy / Compliance Officer (EU/US)","weight":7,"painPoints":["GA4 forces consent banner for any personal data processing","Data transfers to US violate Schrems II / GDPR","No contractual guarantee data stays on EU-owned infrastructure","Legal team spends hours reviewing GA DPA amendments"],"budget":[19,79]},{"name":"Developer / Self-Hosting Advocate","weight":6,"painPoints":["Cloud vendor lock-in for analytics data","Need ClickHouse/PostgreSQL raw access for custom modeling","Open-source auditability for security review","Single-pageviews","CI/CD integration for analytics schema changes"],"budget":[0,49]},{"name":"Enterprise / High-Scale Property (100M+ pv/mo)","weight":5,"painPoints":["GA4 sampling distorts high-cardinality dimensions","99.99% uptime SLA required for board reporting","SSO/SCIM provisioning for 100+ seat team","Data residency proof for sector regulators (finance, health)"],"budget":[299,999]},{"name":"Non-Profit / Public Sector / Education","weight":6,"painPoints":["Surveillance capitalism model conflicts with mission","Budget excludes per-seat enterprise contracts","Need public dashboard sharing for transparency mandates","Cookie banner creates accessibility barrier for constituents"],"budget":[9,39]},{"name":"Web Freelancer / Small Agency (White-Label)","weight":7,"painPoints":["Client onboarding one-by-one in GA4 is tedious","No branded report delivery (email/Slack) for retainer value","Cannot grant client dashboard access without full GA account","Script weight hurts client Core Web Vitals scores"],"budget":[19,69]},{"name":"Product-Led Growth Team (PLG)","weight":5,"painPoints":["User journey exploration requires BigQuery export in GA4","Codeless event capture for in-app milestones missing","Revenue attribution to self-serve signup flow is manual","Funnel steps change weekly; GA4 modifications need admin"],"budget":[49,149]}]
+
+event: personas
+data: {"seed":759045837,"personas":[{"id":0,"name":"Ava Kim","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":83,"skepticism":0.42,"techSavvy":0.14,"painPoint":"Role-based access for clients vs internal team"},{"id":1,"name":"Sofia Kim","segment":"Bootstrapped Startup Team (2-10)","budget":64,"skepticism":0.01,"techSavvy":0.62,"painPoint":"Want AI traffic source tracking (ChatGPT, Perplexity, Claude)"},{"id":2,"name":"Liam Rossi","segment":"Bootstrapped Startup Team (2-10)","budget":50,"skepticism":0.07,"techSavvy":0.54,"painPoint":"Want AI traffic source tracking (ChatGPT, Perplexity, Claude)"},{"id":3,"name":"Liam Silva","segment":"Product-Led Growth Team (PLG)","budget":92,"skepticism":0.72,"techSavvy":0.96,"painPoint":"Codeless event capture for in-app milestones missing"},{"id":4,"name":"Mei Cohen","segment":"Privacy / Compliance Officer (EU/US)","budget":47,"skepticism":0.36,"techSavvy":0.35,"painPoint":"GA4 forces consent banner for any personal data processing"},{"id":5,"name":"Liam Chen","segment":"Solo Founder / Micro-SaaS","budget":18,"skepticism":0.16,"techSavvy":0.05,"painPoint":"Script bloat slowing down their lightweight marketing site"},{"id":6,"name":"Omar Nguyen","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":253,"skepticism":0.23,"techSavvy":0.44,"painPoint":"AI referrer traffic (LLMs) invisible in standard reports"},{"id":7,"name":"Ava Müller","segment":"Growth Marketing Lead at Scale-up","budget":96,"skepticism":0.95,"techSavvy":0.06,"painPoint":"GA4 real-time dashboard refreshes too slowly for daily standups"},{"id":8,"name":"Mateo Kim","segment":"Bootstrapped Startup Team (2-10)","budget":40,"skepticism":0.01,"techSavvy":0.75,"painPoint":"Need funnel visibility to optimize activation/retention"},{"id":9,"name":"Kofi Müller","segment":"Developer / Self-Hosting Advocate","budget":40,"skepticism":0.14,"techSavvy":0.74,"painPoint":"Cloud vendor lock-in for analytics data"},{"id":10,"name":"Priya Silva","segment":"Web Freelancer / Small Agency (White-Label)","budget":50,"skepticism":0.36,"techSavvy":0.19,"painPoint":"Client onboarding one-by-one in GA4 is tedious"},{"id":11,"name":"Raj Novak","segment":"Bootstrapped Startup Team (2-10)","budget":40,"skepticism":0.89,"techSavvy":0.73,"painPoint":"Need funnel visibility to optimize activation/retention"},{"id":12,"name":"Raj Nguyen","segment":"Bootstrapped Startup Team (2-10)","budget":76,"skepticism":0.49,"techSavvy":0.97,"painPoint":"Want AI traffic source tracking (ChatGPT, Perplexity, Claude)"},{"id":13,"name":"Priya Kim","segment":"DTC E-commerce Brand","budget":135,"skepticism":0.15,"techSavvy":0.78,"painPoint":"Privacy compliance adds legal review cycles for each pixel"},{"id":14,"name":"Priya Silva","segment":"Product-Led Growth Team (PLG)","budget":98,"skepticism":0.62,"techSavvy":0.26,"painPoint":"Codeless event capture for in-app milestones missing"},{"id":15,"name":"Liam Müller","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":88,"skepticism":0.27,"techSavvy":0.38,"painPoint":"Client reporting via email/Slack requires manual export"},{"id":16,"name":"Ava Nguyen","segment":"Web Freelancer / Small Agency (White-Label)","budget":58,"skepticism":0.72,"techSavvy":0.31,"painPoint":"Client onboarding one-by-one in GA4 is tedious"},{"id":17,"name":"Sofia Okafor","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":116,"skepticism":0.87,"techSavvy":0.76,"painPoint":"Client reporting via email/Slack requires manual export"},{"id":18,"name":"Omar Haddad","segment":"Bootstrapped Startup Team (2-10)","budget":54,"skepticism":0.09,"techSavvy":0.13,"painPoint":"Want AI traffic source tracking (ChatGPT, Perplexity, Claude)"},{"id":19,"name":"Sofia Silva","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":114,"skepticism":0.4,"techSavvy":0.51,"painPoint":"Role-based access for clients vs internal team"},{"id":20,"name":"Kofi Cohen","segment":"Bootstrapped Startup Team (2-10)","budget":67,"skepticism":0.02,"techSavvy":0.45,"painPoint":"Need funnel visibility to optimize activation/retention"},{"id":21,"name":"Tom Novak","segment":"Bootstrapped Startup Team (2-10)","budget":67,"skepticism":0.65,"techSavvy":0.34,"painPoint":"Want AI traffic source tracking (ChatGPT, Perplexity, Claude)"},{"id":22,"name":"Sofia Novak","segment":"Non-Profit / Public Sector / Education","budget":21,"skepticism":0.69,"techSavvy":0.08,"painPoint":"Surveillance capitalism model conflicts with mission"},{"id":23,"name":"Omar Reyes","segment":"Product-Led Growth Team (PLG)","budget":141,"skepticism":0.46,"techSavvy":0.21,"painPoint":"Funnel steps change weekly; GA4 modifications need admin"},{"id":24,"name":"Zara Nguyen","segment":"Bootstrapped Startup Team (2-10)","budget":35,"skepticism":0.23,"techSavvy":0.41,"painPoint":"GA4 event setup requires dedicated analytics engineering"},{"id":25,"name":"Mateo Cohen","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":85,"skepticism":0.93,"techSavvy":0.03,"painPoint":"White-label sharing links for stakeholder transparency"},{"id":26,"name":"Raj Novak","segment":"Growth Marketing Lead at Scale-up","budget":166,"skepticism":0.65,"techSavvy":0.71,"painPoint":"Need codeless goal creation for rapid experiment iteration"},{"id":27,"name":"Jonas Reyes","segment":"Bootstrapped Startup Team (2-10)","budget":41,"skepticism":0.27,"techSavvy":0.67,"painPoint":"Want AI traffic source tracking (ChatGPT, Perplexity, Claude)"},{"id":28,"name":"Raj Kim","segment":"DTC E-commerce Brand","budget":148,"skepticism":0.86,"techSavvy":0.53,"painPoint":"Privacy compliance adds legal review cycles for each pixel"},{"id":29,"name":"Tom Haddad","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":94,"skepticism":0.61,"techSavvy":0.2,"painPoint":"Consolidated multi-site dashboard missing in GA4"},{"id":30,"name":"Kofi Reyes","segment":"Bootstrapped Startup Team (2-10)","budget":33,"skepticism":0.36,"techSavvy":0.47,"painPoint":"Want AI traffic source tracking (ChatGPT, Perplexity, Claude)"},{"id":31,"name":"Raj Silva","segment":"Solo Founder / Micro-SaaS","budget":16,"skepticism":0.31,"techSavvy":0.45,"painPoint":"Script bloat slowing down their lightweight marketing site"},{"id":32,"name":"Ines Haddad","segment":"Non-Profit / Public Sector / Education","budget":10,"skepticism":0.26,"techSavvy":0.06,"painPoint":"Surveillance capitalism model conflicts with mission"},{"id":33,"name":"Yuki Novak","segment":"Privacy / Compliance Officer (EU/US)","budget":59,"skepticism":0.41,"techSavvy":0.51,"painPoint":"Data transfers to US violate Schrems II / GDPR"},{"id":34,"name":"Priya Rossi","segment":"Product-Led Growth Team (PLG)","budget":87,"skepticism":0.04,"techSavvy":0.75,"painPoint":"User journey exploration requires BigQuery export in GA4"},{"id":35,"name":"Noor Rossi","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":294,"skepticism":0.44,"techSavvy":0.07,"painPoint":"Search Console integration is separate property in GA"},{"id":36,"name":"Zara Kim","segment":"Bootstrapped Startup Team (2-10)","budget":50,"skepticism":0.24,"techSavvy":0.59,"painPoint":"Team access controls without enterprise price tag"},{"id":37,"name":"Liam Okafor","segment":"Privacy / Compliance Officer (EU/US)","budget":72,"skepticism":0.66,"techSavvy":0.32,"painPoint":"GA4 forces consent banner for any personal data processing"},{"id":38,"name":"Mateo Rossi","segment":"Non-Profit / Public Sector / Education","budget":23,"skepticism":0.22,"techSavvy":0.88,"painPoint":"Cookie banner creates accessibility barrier for constituents"},{"id":39,"name":"Jonas Silva","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":128,"skepticism":0.33,"techSavvy":0.51,"painPoint":"Search Console integration is separate property in GA"},{"id":40,"name":"Jonas Müller","segment":"Growth Marketing Lead at Scale-up","budget":182,"skepticism":0.9,"techSavvy":0.04,"painPoint":"UTM/campaign attribution fragmented across tools"},{"id":41,"name":"Yuki Cohen","segment":"Solo Founder / Micro-SaaS","budget":16,"skepticism":0.47,"techSavvy":0.71,"painPoint":"Cookie banner compliance overhead for EU visitors"},{"id":42,"name":"Jonas Nguyen","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":224,"skepticism":0.26,"techSavvy":0.92,"painPoint":"Scroll depth tracking requires custom GTM tags in GA"},{"id":43,"name":"Ava Kim","segment":"Web Freelancer / Small Agency (White-Label)","budget":40,"skepticism":0.92,"techSavvy":0.95,"painPoint":"No branded report delivery (email/Slack) for retainer value"},{"id":44,"name":"Mateo Silva","segment":"Solo Founder / Micro-SaaS","budget":21,"skepticism":0.87,"techSavvy":0.08,"painPoint":"GA4 complexity requires training they don't have time for"},{"id":45,"name":"Mateo Novak","segment":"Web Freelancer / Small Agency (White-Label)","budget":46,"skepticism":0.04,"techSavvy":0.98,"painPoint":"Script weight hurts client Core Web Vitals scores"},{"id":46,"name":"Mei Reyes","segment":"Web Freelancer / Small Agency (White-Label)","budget":47,"skepticism":0.16,"techSavvy":0.32,"painPoint":"No branded report delivery (email/Slack) for retainer value"},{"id":47,"name":"Elena Cohen","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":69,"skepticism":0.73,"techSavvy":0.49,"painPoint":"Consolidated multi-site dashboard missing in GA4"},{"id":48,"name":"Liam Novak","segment":"Growth Marketing Lead at Scale-up","budget":83,"skepticism":0.08,"techSavvy":0.85,"painPoint":"GA4 real-time dashboard refreshes too slowly for daily standups"},{"id":49,"name":"Elena Silva","segment":"Growth Marketing Lead at Scale-up","budget":180,"skepticism":0.39,"techSavvy":0.84,"painPoint":"GA4 real-time dashboard refreshes too slowly for daily standups"},{"id":50,"name":"Sofia Nguyen","segment":"Bootstrapped Startup Team (2-10)","budget":33,"skepticism":0.56,"techSavvy":0.8,"painPoint":"GA4 event setup requires dedicated analytics engineering"},{"id":51,"name":"Sofia Nguyen","segment":"Bootstrapped Startup Team (2-10)","budget":62,"skepticism":0.68,"techSavvy":0.62,"painPoint":"Need funnel visibility to optimize activation/retention"},{"id":52,"name":"Kofi Chen","segment":"Solo Founder / Micro-SaaS","budget":26,"skepticism":0.6,"techSavvy":0.64,"painPoint":"GA4 complexity requires training they don't have time for"},{"id":53,"name":"Jonas Chen","segment":"Solo Founder / Micro-SaaS","budget":13,"skepticism":0.1,"techSavvy":0.06,"painPoint":"GA4 complexity requires training they don't have time for"},{"id":54,"name":"Noor Rossi","segment":"Solo Founder / Micro-SaaS","budget":22,"skepticism":0.86,"techSavvy":0.28,"painPoint":"Cookie banner compliance overhead for EU visitors"},{"id":55,"name":"Mei Okafor","segment":"Developer / Self-Hosting Advocate","budget":4,"skepticism":0.69,"techSavvy":0.69,"painPoint":"Need ClickHouse/PostgreSQL raw access for custom modeling"},{"id":56,"name":"Ines Chen","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":242,"skepticism":0.25,"techSavvy":0.87,"painPoint":"Search Console integration is separate property in GA"},{"id":57,"name":"Sofia Novak","segment":"Developer / Self-Hosting Advocate","budget":21,"skepticism":0.84,"techSavvy":0.17,"painPoint":"Open-source auditability for security review"},{"id":58,"name":"Ava Novak","segment":"Developer / Self-Hosting Advocate","budget":20,"skepticism":0.73,"techSavvy":0.06,"painPoint":"Open-source auditability for security review"},{"id":59,"name":"Ines Rossi","segment":"Enterprise / High-Scale Property (100M+ pv/mo)","budget":488,"skepticism":0.77,"techSavvy":0.96,"painPoint":"Data residency proof for sector regulators (finance, health)"},{"id":60,"name":"Elena Rossi","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":296,"skepticism":0.8,"techSavvy":0.62,"painPoint":"AI referrer traffic (LLMs) invisible in standard reports"},{"id":61,"name":"Liam Okafor","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":97,"skepticism":0.8,"techSavvy":0.53,"painPoint":"Consolidated multi-site dashboard missing in GA4"},{"id":62,"name":"Yuki Müller","segment":"Bootstrapped Startup Team (2-10)","budget":40,"skepticism":0.47,"techSavvy":0.51,"painPoint":"Team access controls without enterprise price tag"},{"id":63,"name":"Priya Silva","segment":"Solo Founder / Micro-SaaS","budget":27,"skepticism":0.01,"techSavvy":0.22,"painPoint":"GA4 complexity requires training they don't have time for"},{"id":64,"name":"Mei Haddad","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":140,"skepticism":0.8,"techSavvy":0.62,"painPoint":"Consolidated multi-site dashboard missing in GA4"},{"id":65,"name":"Priya Müller","segment":"Solo Founder / Micro-SaaS","budget":15,"skepticism":0.8,"techSavvy":0.02,"painPoint":"GA4 complexity requires training they don't have time for"},{"id":66,"name":"Ava Reyes","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":274,"skepticism":0.3,"techSavvy":0.24,"painPoint":"Bot/spam referrer pollution inflates vanity metrics"},{"id":67,"name":"Zara Müller","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":102,"skepticism":0.8,"techSavvy":0.6,"painPoint":"Consolidated multi-site dashboard missing in GA4"},{"id":68,"name":"Kofi Silva","segment":"Solo Founder / Micro-SaaS","budget":25,"skepticism":0.76,"techSavvy":0.38,"painPoint":"Cookie banner compliance overhead for EU visitors"},{"id":69,"name":"Noor Nguyen","segment":"Enterprise / High-Scale Property (100M+ pv/mo)","budget":572,"skepticism":0.62,"techSavvy":0.32,"painPoint":"99.99% uptime SLA required for board reporting"},{"id":70,"name":"Kofi Chen","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":196,"skepticism":0.08,"techSavvy":0.43,"painPoint":"Bot/spam referrer pollution inflates vanity metrics"},{"id":71,"name":"Liam Novak","segment":"Privacy / Compliance Officer (EU/US)","budget":50,"skepticism":0.87,"techSavvy":0.7,"painPoint":"No contractual guarantee data stays on EU-owned infrastructure"},{"id":72,"name":"Jonas Müller","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":51,"skepticism":0.43,"techSavvy":0.81,"painPoint":"Consolidated multi-site dashboard missing in GA4"},{"id":73,"name":"Tom Rossi","segment":"Non-Profit / Public Sector / Education","budget":33,"skepticism":0.47,"techSavvy":0.21,"painPoint":"Surveillance capitalism model conflicts with mission"},{"id":74,"name":"Mei Rossi","segment":"Product-Led Growth Team (PLG)","budget":106,"skepticism":0.4,"techSavvy":0.62,"painPoint":"Revenue attribution to self-serve signup flow is manual"},{"id":75,"name":"Kofi Chen","segment":"Solo Founder / Micro-SaaS","budget":16,"skepticism":0.07,"techSavvy":0.23,"painPoint":"Need revenue attribution without engineering effort"},{"id":76,"name":"Liam Okafor","segment":"Product-Led Growth Team (PLG)","budget":98,"skepticism":0.35,"techSavvy":0.92,"painPoint":"User journey exploration requires BigQuery export in GA4"},{"id":77,"name":"Sofia Haddad","segment":"Web Freelancer / Small Agency (White-Label)","budget":20,"skepticism":0.71,"techSavvy":0.35,"painPoint":"Client onboarding one-by-one in GA4 is tedious"},{"id":78,"name":"Sofia Kim","segment":"Developer / Self-Hosting Advocate","budget":18,"skepticism":0.65,"techSavvy":0.86,"painPoint":"Cloud vendor lock-in for analytics data"},{"id":79,"name":"Raj Okafor","segment":"Product-Led Growth Team (PLG)","budget":59,"skepticism":0.45,"techSavvy":0.23,"painPoint":"User journey exploration requires BigQuery export in GA4"},{"id":80,"name":"Zara Müller","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":192,"skepticism":0.66,"techSavvy":0.44,"painPoint":"Scroll depth tracking requires custom GTM tags in GA"},{"id":81,"name":"Sofia Silva","segment":"Web Freelancer / Small Agency (White-Label)","budget":51,"skepticism":0.16,"techSavvy":0.72,"painPoint":"No branded report delivery (email/Slack) for retainer value"},{"id":82,"name":"Jonas Reyes","segment":"DTC E-commerce Brand","budget":98,"skepticism":0.61,"techSavvy":0.83,"painPoint":"Privacy compliance adds legal review cycles for each pixel"},{"id":83,"name":"Omar Kim","segment":"Bootstrapped Startup Team (2-10)","budget":66,"skepticism":0.47,"techSavvy":0.67,"painPoint":"Want AI traffic source tracking (ChatGPT, Perplexity, Claude)"},{"id":84,"name":"Kofi Müller","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":132,"skepticism":0.91,"techSavvy":0.33,"painPoint":"White-label sharing links for stakeholder transparency"},{"id":85,"name":"Liam Cohen","segment":"Growth Marketing Lead at Scale-up","budget":161,"skepticism":0.01,"techSavvy":0.7,"painPoint":"Channel grouping (Paid Search, Affiliates) requires manual config in GA"},{"id":86,"name":"Yuki Cohen","segment":"Web Freelancer / Small Agency (White-Label)","budget":20,"skepticism":0.9,"techSavvy":0.84,"painPoint":"No branded report delivery (email/Slack) for retainer value"},{"id":87,"name":"Mei Müller","segment":"Product-Led Growth Team (PLG)","budget":59,"skepticism":0.3,"techSavvy":0.93,"painPoint":"Funnel steps change weekly; GA4 modifications need admin"},{"id":88,"name":"Zara Kim","segment":"Solo Founder / Micro-SaaS","budget":22,"skepticism":0.41,"techSavvy":1,"painPoint":"GA4 complexity requires training they don't have time for"},{"id":89,"name":"Sofia Reyes","segment":"Web Freelancer / Small Agency (White-Label)","budget":28,"skepticism":0.85,"techSavvy":0.28,"painPoint":"Cannot grant client dashboard access without full GA account"},{"id":90,"name":"Mei Patel","segment":"Solo Founder / Micro-SaaS","budget":28,"skepticism":0.49,"techSavvy":0.03,"painPoint":"Script bloat slowing down their lightweight marketing site"},{"id":91,"name":"Liam Rossi","segment":"Web Freelancer / Small Agency (White-Label)","budget":35,"skepticism":0.94,"techSavvy":0.53,"painPoint":"Script weight hurts client Core Web Vitals scores"},{"id":92,"name":"Ines Haddad","segment":"Content Publisher / Media Site (1M+ pv/mo)","budget":186,"skepticism":0.51,"techSavvy":0.72,"painPoint":"Search Console integration is separate property in GA"},{"id":93,"name":"Sofia Kim","segment":"DTC E-commerce Brand","budget":225,"skepticism":0.6,"techSavvy":0.71,"painPoint":"Revenue attribution to content pages requires custom data layer"},{"id":94,"name":"Yuki Novak","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":65,"skepticism":0.16,"techSavvy":0.05,"painPoint":"Client reporting via email/Slack requires manual export"},{"id":95,"name":"Liam Nguyen","segment":"Enterprise / High-Scale Property (100M+ pv/mo)","budget":735,"skepticism":0.24,"techSavvy":0.2,"painPoint":"SSO/SCIM provisioning for 100+ seat team"},{"id":96,"name":"Zara Novak","segment":"Privacy / Compliance Officer (EU/US)","budget":53,"skepticism":0.56,"techSavvy":0.37,"painPoint":"Legal team spends hours reviewing GA DPA amendments"},{"id":97,"name":"Priya Rossi","segment":"Solo Founder / Micro-SaaS","budget":14,"skepticism":0.28,"techSavvy":0.21,"painPoint":"Cookie banner compliance overhead for EU visitors"},{"id":98,"name":"Sofia Cohen","segment":"Agency / Fractional CMO Managing 10+ Client Sites","budget":65,"skepticism":0.02,"techSavvy":0.42,"painPoint":"Client reporting via email/Slack requires manual export"},{"id":99,"name":"Yuki Haddad","segment":"Bootstrapped Startup Team (2-10)","budget":34,"skepticism":0.74,"techSavvy":0.26,"painPoint":"GA4 event setup requires dedicated analytics engineering"}]}
+
+event: reaction
+data: {"id":0,"verdict":"buy","dropSection":-1,"objection":"Role-based access fits need","quote":"This is exactly what we need — affordable, EU‑hosted, with the team permissions we require."}
+
+event: reaction
+data: {"id":12,"verdict":"buy","dropSection":-1,"objection":"Fits budget and solves AI traffic tracking","quote":"Finally I can see which AI bots drive traffic to my site."}
+
+event: reaction
+data: {"id":7,"verdict":"buy","dropSection":-1,"objection":"None","quote":"I need a real‑time dashboard that finally keeps up with my daily standups, and Plausible delivers it at a price I can afford."}
+
+event: reaction
+data: {"id":4,"verdict":"buy","dropSection":-1,"objection":"Limited data residency options beyond EU","quote":"Finally, an analytics solution that lets us track without forcing consent dialogs across our sites."}
+
+event: reaction
+data: {"id":13,"verdict":"buy","dropSection":-1,"objection":"EU data residency confirmation required","quote":"Finally, an analytics tool that respects privacy without forcing my legal team to reinvent the tracking pixel."}
+
+event: reaction
+data: {"id":15,"verdict":"buy","dropSection":-1,"objection":"limited customization","quote":"This looks solid, fits my budget and solves my reporting headache."}
+
+event: reaction
+data: {"id":1,"verdict":"buy","dropSection":-1,"objection":"Need proof AI traffic tracking works as promised","quote":"Show me real AI referral data before I sign up."}
+
+event: reaction
+data: {"id":11,"verdict":"buy","dropSection":-1,"objection":"price OK","quote":"Finally, a analytics tool that actually shows me funnel drop‑offs without the GA4 headache."}
+
+event: reaction
+data: {"id":8,"verdict":"buy","dropSection":-1,"objection":"No objection","quote":"I’m sold—Plausible’s funnel insights fit our $40 budget and exactly address our activation tracking needs."}
+
+event: reaction
+data: {"id":2,"verdict":"buy","dropSection":-1,"objection":"annual billing required","quote":"I can pay $19 a month if I commit yearly, but I’d rather have monthly options."}
+
+event: reaction
+data: {"id":17,"verdict":"buy","dropSection":-1,"objection":"limited reporting customization","quote":"I need more granular export options for each client."}
+
+event: reaction
+data: {"id":10,"verdict":"buy","dropSection":-1,"objection":"Needs finer client segmentation","quote":"I’m sold—Plausible finally lets me stop juggling client onboarding in GA4."}
+
+event: reaction
+data: {"id":9,"verdict":"maybe","dropSection":-1,"objection":"vendor lock-in","quote":"I need to self-host the analytics to truly avoid any vendor lock-in."}
+
+event: reaction
+data: {"id":6,"verdict":"maybe","dropSection":-1,"objection":"worries AI referrer data may be incomplete","quote":"I’d subscribe only if I’m convinced the AI traffic insights are precise enough for my decisions."}
+
+event: reaction
+data: {"id":3,"verdict":"maybe","dropSection":-1,"objection":"Missing codeless in-app milestone tracking","quote":"I’m looking for a plug-and-play way to capture those internal product events, and the page doesn’t spell that out."}
+
+event: reaction
+data: {"id":23,"verdict":"buy","dropSection":-1,"objection":"weekly funnel updates require admin overhead","quote":"Finally a GA4‑lite that lets me set up funnels without babysitting the tag manager."}
+
+event: reaction
+data: {"id":5,"verdict":"buy","dropSection":-1,"objection":"price fits budget","quote":"Finally, an analytics script that’s tiny enough not to slow my site, and it actually pays for itself at $14/mo."}
+
+event: reaction
+data: {"id":16,"verdict":"maybe","dropSection":3,"objection":"Missing client onboarding workflow","quote":"Looks great, but I still have to teach each client GA4 manually and Plausible doesn’t streamline that process."}
+
+event: reaction
+data: {"id":18,"verdict":"buy","dropSection":-1,"objection":"None","quote":"Seeing AI traffic sources tracked in real time is exactly what we needed to optimize our AI-driven content strategy."}
+
+event: reaction
+data: {"id":20,"verdict":"buy","dropSection":-1,"objection":"Monthly price exceeds cheaper tiers","quote":"I’m ready to switch to Plausible now to get real funnel insights."}
+
+event: reaction
+data: {"id":21,"verdict":"buy","dropSection":-1,"objection":"Insufficient AI traffic granularity & goal flexibility","quote":"The analytics look usable and priced right, but I’d need finer AI source splits and richer custom goal options to truly replace GA."}
+
+event: reaction
+data: {"id":26,"verdict":"buy","dropSection":-1,"objection":"N/A","quote":"I’m sold – the codeless goal builder finally lets me prototype experiments without touching code."}
+
+event: reaction
+data: {"id":29,"verdict":"buy","dropSection":-1,"objection":"fits budget","quote":"Exactly what I need—a single, privacy‑first dashboard that consolidates all my clients' sites without breaking the bank."}
+
+event: reaction
+data: {"id":19,"verdict":"maybe","dropSection":7,"objection":"Unclear role‑based permissions","quote":"I need finer‑grained client vs internal controls, and it's not obvious Plausible delivers that."}
+
+event: reaction
+data: {"id":27,"verdict":"buy","dropSection":-1,"objection":"Billing cycle limited","quote":"This solves my AI traffic tracking need and fits my $41/mo budget, so I'm ready to buy."}
+
+event: reaction
+data: {"id":28,"verdict":"buy","dropSection":-1,"objection":"Limited ecommerce attribution depth","quote":"Finally, an analytics tool that respects privacy without forcing me to juggle cookie banners and legal reviews."}
+
+event: reaction
+data: {"id":32,"verdict":"buy","dropSection":-1,"objection":"annual billing","quote":"Finally, a simple, privacy‑first analytics tool that fits my $10/mo budget and aligns with our mission."}
+
+event: reaction
+data: {"id":14,"verdict":"maybe","dropSection":-1,"objection":"Codeless in-app milestone event capture not explicit","quote":"I need to capture in-app milestones without code, and this page doesn’t clearly confirm that feature."}
+
+event: reaction
+data: {"id":24,"verdict":"buy","dropSection":-1,"objection":"Affordable plan under $35/mo","quote":"Finally, a privacy‑first analytics tool that lets me set up events without hiring a dedicated analytics engineer and still stays under my $35/month budget."}
+
+event: reaction
+data: {"id":22,"verdict":"maybe","dropSection":7,"objection":"Price near budget limit","quote":"I’m intrigued by the privacy benefits, but $19 a month stretches my $21 monthly cap."}
+
+event: reaction
+data: {"id":30,"verdict":"buy","dropSection":-1,"objection":"affordable","quote":"Finally, a GA alternative that actually shows which AI bots are driving traffic – perfect for our bootstrapped startup."}
+
+event: reaction
+data: {"id":33,"verdict":"buy","dropSection":-1,"objection":"Price fits budget","quote":"I’m ready to switch because this EU‑hosted, cookie‑free analytics finally respects Schrems II while staying well under $60/month."}
+
+event: reaction
+data: {"id":25,"verdict":"maybe","dropSection":7,"objection":"No white‑label sharing details","quote":"I need clear white‑label sharing links to keep stakeholders in the loop, and the page doesn't show how that works."}
+
+event: reaction
+data: {"id":41,"verdict":"buy","dropSection":-1,"objection":"Price fits budget","quote":"Finally, a tool that lets me track EU visitors without endless cookie consent headaches."}
+
+event: reaction
+data: {"id":38,"verdict":"buy","dropSection":-1,"objection":"none","quote":"Finally, a GA alternative that won’t force us to plaster cookie banners on our public sites."}
+
+event: reaction
+data: {"id":31,"verdict":"buy","dropSection":-1,"objection":"Slightly above budget but still affordable","quote":"This solution kills script bloat and stays under my $16 monthly limit."}
+
+event: reaction
+data: {"id":37,"verdict":"buy","dropSection":-1,"objection":"Annual billing only","quote":"Finally, a GA4 alternative that respects EU privacy rules without forcing consent banners."}
+
+event: reaction
+data: {"id":35,"verdict":"buy","dropSection":-1,"objection":"N/A","quote":"Finally, I can track Search Console data in the same tool without juggling separate GA properties."}
+
+event: reaction
+data: {"id":34,"verdict":"bounce","dropSection":1,"objection":"No BigQuery export","quote":"I need BigQuery export for user journey exploration, and this doesn't provide it."}
+
+event: reaction
+data: {"id":42,"verdict":"buy","dropSection":-1,"objection":"","quote":"Finally, scroll depth works out‑of‑the‑box—no more GTM gymnastics."}
+
+event: reaction
+data: {"id":44,"verdict":"buy","dropSection":-1,"objection":"price within budget","quote":"At $19/mo it’s within my $21 budget and finally solves GA4 overload."}
+
+event: reaction
+data: {"id":45,"verdict":"buy","dropSection":-1,"objection":"script weight claim needs verification","quote":"I'm sold—if Plausible really cuts 135KB per visitor, I can finally protect my clients' Core Web Vitals without sacrificing analytics."}
+
+event: reaction
+data: {"id":36,"verdict":"buy","dropSection":-1,"objection":"Team seat limits in lower plans","quote":"I can afford the $14/mo Growth plan, but I need to confirm team access controls work for my small team without extra cost."}
+
+event: reaction
+data: {"id":53,"verdict":"buy","dropSection":-1,"objection":"price fits budget","quote":"Finally a GA4‑free alternative that actually feels simple enough for a one‑person operation."}
+
+event: reaction
+data: {"id":43,"verdict":"bounce","dropSection":7,"objection":"Missing white-label reporting","quote":"I can't sell retainer value without custom branded analytics reports."}
+
+event: reaction
+data: {"id":39,"verdict":"buy","dropSection":-1,"objection":"price OK","quote":"Finally, a GA alternative that actually lets me link Search Console without extra hassle and stays well within my $128/mo budget."}
+
+event: reaction
+data: {"id":40,"verdict":"maybe","dropSection":-1,"objection":"Skepticism about UTM attribution depth","quote":"I need proof that Plausible can unify my fragmented UTM data better than GA4."}
+
+event: reaction
+data: {"id":46,"verdict":"maybe","dropSection":7,"objection":"Missing explicit branded report delivery / white‑label options","quote":"I like the simplicity but need customizable, branded reports for my clients—Plausible doesn’t clearly offer that."}
+
+event: reaction
+data: {"id":51,"verdict":"buy","dropSection":-1,"objection":"price could rise if traffic grows","quote":"The funnel tracking finally lets me see where users drop off, which is exactly what I needed."}
+
+event: reaction
+data: {"id":54,"verdict":"buy","dropSection":-1,"objection":"Billing cycle not flexible","quote":"I need a plan that fits my $22/mo budget and EU compliance, and the annual‑only pricing feels a bit restrictive."}
+
+event: reaction
+data: {"id":48,"verdict":"buy","dropSection":-1,"objection":"none","quote":"Finally, a real‑time dashboard that keeps up with our standups."}
+
+event: reaction
+data: {"id":49,"verdict":"buy","dropSection":-1,"objection":"Enterprise pricing not transparent","quote":"Finally, a GA4 alternative that actually updates fast enough for my daily standups."}
+
+event: reaction
+data: {"id":56,"verdict":"buy","dropSection":-1,"objection":"none","quote":"Plausible finally gives me Search Console data in one place—exactly what I needed."}
+
+event: reaction
+data: {"id":47,"verdict":"buy","dropSection":-1,"objection":"none","quote":"Finally, a GA4 alternative that actually lets me manage multiple client dashboards without the headache."}
+
+event: reaction
+data: {"id":52,"verdict":"buy","dropSection":-1,"objection":"No objection","quote":"This looks like the simple, no-training GA4 alternative I need, and it fits my $26 budget."}
+
+event: reaction
+data: {"id":60,"item":{"title":"Plausible Plausible This Magic, Anonymous, Real-time Web Analytics"},"verdict":"buy","dropSection":-1,"objection":"none","quote":"Finally, a tool that actually shows me AI traffic sources instead of hiding them in GA4."}
+
+event: reaction
+data: {"id":57,"verdict":"maybe","dropSection":-1,"objection":"Need more detail on open-source audit process","quote":"I like the idea, but I need to see how the open-source code can be independently audited for security."}
+
+event: reaction
+data: {"id":63,"verdict":"buy","dropSection":-1,"objection":"minor feature limits","quote":"Finally, an analytics tool that just works without forcing me to become a data scientist."}
+
+event: reaction
+data: {"id":55,"verdict":"bounce","dropSection":7,"objection":"Too pricey and no raw DB access","quote":"I need ClickHouse/PostgreSQL raw data and can't spend $9/month when my budget is $4."}
+
+event: reaction
+data: {"id":50,"verdict":"buy","dropSection":-1,"objection":"limited event customization","quote":"I need a solution that lets me set up GA4‑style events without hiring a full‑time analyst."}
+
+event: reaction
+data: {"id":59,"verdict":"maybe","dropSection":-1,"objection":"Need concrete data residency certification","quote":"I need iron‑clad documentation that my data never leaves EU, not just marketing statements."}
+
+event: reaction
+data: {"id":66,"verdict":"buy","dropSection":-1,"objection":"price okay","quote":"Finally a GA alternative that actually filters out bot spam—exactly what I needed."}
+
+event: reaction
+data: {"id":67,"verdict":"buy","dropSection":-1,"objection":"Feature meets need","quote":"Finally a GA4‑level dashboard that actually consolidates all my client sites without the headache."}
+
+event: reaction
+data: {"id":62,"verdict":"buy","dropSection":-1,"objection":"team cap","quote":"I’d sign up now – the Growth plan fits my $40 budget and gives the team controls I need."}
+
+event: reaction
+data: {"id":61,"verdict":"maybe","dropSection":1,"objection":"Missing multi-site dashboard","quote":"I need a single dashboard that aggregates all my client sites—something GA4 lacks, and I’m not convinced Plausible delivers it clearly."}
+
+event: reaction
+data: {"id":68,"verdict":"buy","dropSection":-1,"objection":"none","quote":"Finally, a GA alternative that doesn’t force me to manage cookie consent gymnastics."}
+
+event: reaction
+data: {"id":70,"verdict":"buy","dropSection":-1,"objection":"Price fits budget","quote":"Finally, an analytics tool that filters out bot spam — exactly what I need."}
+
+event: reaction
+data: {"id":65,"verdict":"maybe","dropSection":7,"objection":"price near budget limit","quote":"I’m intrigued, but $14 a month is already stretching my limited budget."}
+
+event: reaction
+data: {"id":74,"verdict":"buy","dropSection":-1,"objection":"Revenue attribution workflow","quote":"I’m sold on the features, but the manual mapping of conversions to sign‑ups still feels a bit clunky."}
+
+event: reaction
+data: {"id":64,"verdict":"maybe","dropSection":-1,"objection":"Multi-site dashboard limits","quote":"I need a tool that consolidates analytics across all my client sites and eliminates GA4 headaches—Plausible's Business plan hints at a Consolidated View, but I want to be sure it truly scales for 10+ sites within my $140 budget."}
+
+event: reaction
+data: {"id":58,"verdict":"maybe","dropSection":-1,"objection":"open-source claim not enough for self-host auditability","quote":"I'm intrigued, but I need a truly self-hostable, fully auditable product, not just a hosted SaaS that claims to be open source."}
+
+event: reaction
+data: {"id":71,"verdict":"maybe","dropSection":-1,"objection":"No contractual guarantee data stays on EU-owned infrastructure","quote":"I’m intrigued but need a solid EU data‑residency guarantee before committing."}
+
+event: reaction
+data: {"id":73,"verdict":"maybe","dropSection":-1,"objection":"price vs needed features","quote":"I'm intrigued by the privacy stance, but I need to check if the $14‑$19 plans fit the $33 budget while delivering what we truly need for mission‑centric analytics."}
+
+event: reaction
+data: {"id":69,"verdict":"buy","dropSection":-1,"objection":"No explicit SLA guarantee","quote":"The uptime claim is just a 90‑day figure, not a promised SLA, which leaves me uncertain."}
+
+event: reaction
+data: {"id":75,"verdict":"buy","dropSection":-1,"objection":"Price fits","quote":"I can set up revenue goals without writing any code, and it stays under my $16 budget."}
+
+event: reaction
+data: {"id":76,"verdict":"maybe","dropSection":10,"objection":"No BigQuery export for user journey data","quote":"I need to push funnel data into BigQuery for deeper analysis, and that isn’t offered."}
+
+event: reaction
+data: {"id":80,"verdict":"buy","dropSection":-1,"objection":"None","quote":"Finally, scroll depth just works without fiddling with GTM tags."}
+
+event: reaction
+data: {"id":72,"verdict":"buy","dropSection":-1,"objection":"Needs Business plan for consolidated multi‑site view","quote":"I’m sold—Plausible finally offers the multi‑site dashboard I’ve been missing in GA4."}
+
+event: reaction
+data: {"id":77,"verdict":"buy","dropSection":-1,"objection":"Integration limits for client onboarding","quote":"Finally, a simple way to stop juggling GA4 onboarding for each client—this looks like it could actually save me hours."}
+
+event: reaction
+data: {"id":79,"verdict":"bounce","dropSection":0,"objection":"No BigQuery export","quote":"I need BigQuery export for user journey analysis, and this doesn't provide it."}
+
+event: reaction
+data: {"id":88,"verdict":"buy","dropSection":-1,"objection":"annual billing required","quote":"I love how Plausible eliminates GA4 complexity and stays under my $22/month budget."}
+
+event: reaction
+data: {"id":84,"verdict":"maybe","dropSection":-1,"objection":"White‑label sharing links aren’t clearly demonstrated","quote":"I’m intrigued but need to see how white‑label sharing actually works for stakeholders."}
+
+event: reaction
+data: {"id":83,"verdict":"buy","dropSection":-1,"objection":"price fits budget and AI tracking works","quote":"Finally, a privacy‑first analytics tool that actually shows which AI bots are visiting – and it costs less than my coffee budget."}
+
+event: reaction
+data: {"id":78,"verdict":"maybe","dropSection":7,"objection":"Potential vendor lock-in","quote":"I’m intrigued by the privacy features but worried about being locked into a hosted SaaS solution."}
+
+event: reaction
+data: {"id":92,"verdict":"buy","dropSection":-1,"objection":"none","quote":"I love that Plausible finally lets me see Search Console data right in the dashboard without juggling GA properties."}
+
+event: reaction
+data: {"id":82,"verdict":"buy","dropSection":-1,"objection":"Unclear enterprise pricing","quote":"Finally, an analytics tool that respects privacy without forcing a legal audit on every pixel."}
+
+event: reaction
+data: {"id":87,"verdict":"buy","dropSection":-1,"objection":"No objection","quote":"At $19/mo it’s a no‑brainer for my budget, and the funnel tracking plugs right into my weekly tweaks."}
+
+event: reaction
+data: {"id":94,"verdict":"buy","dropSection":-1,"objection":"price fits budget","quote":"I'm thrilled—no more manual GA exports for my client reports."}
+
+event: reaction
+data: {"id":91,"verdict":"maybe","dropSection":-1,"objection":"Script weight impact on Core Web Vitals is not fully quantified","quote":"I need concrete numbers on how Plausible's script affects my site's speed before I can switch."}
+
+event: reaction
+data: {"id":85,"verdict":"maybe","dropSection":-1,"objection":"Scalability and pricing tier limitations","quote":"At $161/month I can’t justify staying on the $19 tier when I need to track more traffic and campaigns."}
+
+event: reaction
+data: {"id":90,"verdict":"buy","dropSection":-1,"objection":"Need reassurance on script size impact.","quote":"Honestly, if Plausible can keep my site speedy without adding bloat, I'm sold."}
+
+event: reaction
+data: {"id":81,"verdict":"bounce","dropSection":8,"objection":"No white-label reporting","quote":"I need to send polished, branded dashboards to my clients, not generic email snapshots."}
+
+event: reaction
+data: {"id":89,"verdict":"maybe","dropSection":-1,"objection":"Unclear if client dashboard sharing works without a full GA account","quote":"I’m intrigued but need to know if I can give clients their own read‑only dashboard without handing over a full GA property."}
+
+event: reaction
+data: {"id":95,"verdict":"maybe","dropSection":-1,"objection":"Unclear SCIM support and Enterprise pricing","quote":"I’m intrigued, but I need to know if SSO and SCIM provisioning are supported for a 100‑seat team and whether the custom Enterprise pricing fits within a $735/mo budget."}
+
+event: reaction
+data: {"id":98,"verdict":"buy","dropSection":-1,"objection":"Need more seamless Slack/email report automation","quote":"I’d buy in a heartbeat, but I’d love a true one‑click Slack push for client reports."}
+
+event: reaction
+data: {"id":97,"verdict":"buy","dropSection":-1,"objection":"Price fits budget but I remain cautious about feature depth for strict EU compliance","quote":"I can finally ditch the cookie banner nightmare and focus on real insights."}
+
+event: reaction
+data: {"id":96,"verdict":"maybe","dropSection":-1,"objection":"Need clearer legal compliance details/DPA specifics","quote":"I’m intrigued by the privacy claims but want a concrete DPA that maps directly to GA’s amendment requirements."}
+
+event: reaction
+data: {"id":86,"verdict":"maybe","dropSection":-1,"objection":"reports required","quote":"I don’t want to waste time sending branded email reports."}
+
+event: reaction
+data: {"id":93,"verdict":"maybe","dropSection":-1,"objection":"revenue attribution requires custom data layer not natively supported","quote":"I need granular revenue attribution per content page, which Plausible doesn't explicitly support."}
+
+event: reaction
+data: {"id":99,"verdict":"buy","dropSection":7,"objection":"annual billing only","quote":"I’m sold – the codeless goals finally let me skip hiring an analytics engineer."}
+
+event: done
+data: {}
+

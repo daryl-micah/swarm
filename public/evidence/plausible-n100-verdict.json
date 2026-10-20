@@ -1,0 +1,65 @@
+{
+ "objections": [
+  {
+   "theme": "Pricing transparency & scalability",
+   "count": 6
+  },
+  {
+   "theme": "Self-hosting & data control",
+   "count": 5
+  },
+  {
+   "theme": "White-label capabilities",
+   "count": 5
+  },
+  {
+   "theme": "Data export & integration",
+   "count": 4
+  },
+  {
+   "theme": "Enterprise/team features",
+   "count": 3
+  },
+  {
+   "theme": "In-app event tracking",
+   "count": 2
+  },
+  {
+   "theme": "Data residency/compliance",
+   "count": 2
+  },
+  {
+   "theme": "Revenue attribution clarity",
+   "count": 1
+  },
+  {
+   "theme": "General skepticism",
+   "count": 1
+  }
+ ],
+ "rewrites": [
+  {
+   "index": 7,
+   "text": "## Traffic based plans that match your growth\n\nStart a 30-day free trial — no credit card required. Annual billing includes 2 months free.\n\nPlans scale from **10k to 10M+** monthly pageviews. Use the slider to see your price.\n\n### Starter — $9/mo (billed yearly)\n* One site\n* 3 years data retention\n* Intuitive, fast, privacy-friendly dashboard\n* Email/Slack reports\n* Google Analytics import\n* Goals & custom events\n* Saved Segments\n* Annotations\n\n### Growth — $14/mo (billed yearly)\n* Everything in Starter\n* Up to 3 sites\n* Up to 3 team members\n* Team Management\n* Shared Links, Embedded Dashboards, Shared Segments, Shared Annotations\n\n### Business — $19/mo (billed yearly)\n* Everything in Growth\n* Up to 10 sites\n* Up to 10 team members\n* 5 years data retention\n* Custom Properties\n* Stats API (600 requests/hour)\n* Data Studio Connector\n* Ecommerce revenue attribution\n* Funnels & user journeys\n* Consolidated View\n\n### Enterprise — Custom pricing\n[Contact us](/contact) for a quote.\n* Everything in Business\n* 10+ sites, 10+ team members\n* 600+ Stats API requests/hour\n* Sites API access\n* Single Sign-On (SSO)\n* Managed Proxy\n* Scheduled raw event data exports\n* 5+ years data retention\n* Priority support"
+  },
+  {
+   "index": 1,
+   "text": "## Why use Plausible Analytics?\n\nGoogle Analytics is overkill for most site owners. Plausible gives you clear, useful insights without complexity, training, or prior analytics experience.\n\n**Automatic scroll depth tracking** — Scroll depth (1–100%) tracked on every page automatically. No setup, no tag managers. Create scroll-depth goals without code.\n\n**Monitor traffic from AI tools** — See which AI tools (ChatGPT, Perplexity, Claude) send traffic. Identify pages attracting AI visitors and the conversions they complete.\n\n**Analyze SEO performance** — Connect Search Console to view search queries and organic performance directly in Plausible. Track SEO content and conversions in one place.\n\n**Measure paid ads & campaigns** — Track UTM campaigns with automatic channel grouping (Paid Search, Affiliates). Analyze landing pages, conversions, and locations.\n\n**Real-time dashboard** — Live traffic with the same metrics as your main dashboard. Updates every 30 seconds, no refresh needed.\n\n**Codeless goals & revenue tracking** — Turn any page into a goal. Auto-track file downloads, form completions, external link clicks. Set up custom events and revenue tracking.\n\n**Funnels & user journeys** — Measure drop-off across a fixed step sequence, or explore actual visitor paths to discover unexpected flows.\n\n**Built-in bot filtering** — Excludes bots, referrer spam, and data-center traffic out of the box so stats reflect real human visits."
+  },
+  {
+   "index": 11,
+   "text": "### Enterprise\n\nCustom pricing — [Contact us](/contact).\n\n* Everything in Business\n* 10+ sites\n* 10+ team members\n* 600+ Stats API requests per hour\n* Sites API access\n* Single Sign-On (SSO)\n* Managed Proxy\n* Scheduled raw event data exports\n* 5+ years data retention\n* Priority support"
+  }
+ ],
+ "gaps": [
+  "Self-hosting option (page is SaaS-only, hosted on EU-owned infrastructure)",
+  "BigQuery export (not mentioned; Enterprise offers scheduled raw event data exports)",
+  "Raw ClickHouse/PostgreSQL access for custom modeling (not mentioned)",
+  "White-label reporting capabilities & branded report delivery (footer links to white-label page but no details in sections)",
+  "SCIM provisioning for large teams (not mentioned)",
+  "Role-based access controls (Team Management in Growth/Business, but granular roles not described)",
+  "Contractual guarantee data stays on EU-owned infrastructure (page states data never leaves EU, processed on EU-owned servers, but no contractual guarantee mentioned)",
+  "In-app event capture for milestones (codeless goals/custom events exist, but in-app milestone tracking not specified)",
+  "Revenue attribution clarity for self-serve signup flow (Ecommerce revenue attribution in Business, codeless revenue tracking in features, but self-serve flow not detailed)"
+ ]
+}

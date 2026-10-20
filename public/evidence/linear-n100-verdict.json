@@ -1,0 +1,95 @@
+{
+ "objections": [
+  {
+   "theme": "Pricing unclear or not disclosed",
+   "count": 16
+  },
+  {
+   "theme": "No self‑hosting or data‑ownership option",
+   "count": 10
+  },
+  {
+   "theme": "Missing visual canvas / creative workflow (ticket‑centric only)",
+   "count": 8
+  },
+  {
+   "theme": "Vague promises, no concrete proof or ROI",
+   "count": 8
+  },
+  {
+   "theme": "Too developer/engineering‑centric, alienates PMs/designers",
+   "count": 7
+  },
+  {
+   "theme": "Jargon‑heavy copy alienates non‑technical stakeholders",
+   "count": 7
+  },
+  {
+   "theme": "Unclear migration path (Jira, legacy workflows, permissions)",
+   "count": 7
+  },
+  {
+   "theme": "Agent management/governance capabilities unclear",
+   "count": 7
+  },
+  {
+   "theme": "AI focus overshadows self‑hosting/data residency needs",
+   "count": 6
+  },
+  {
+   "theme": "Unresolved performance bugs / no concrete latency fixes shown",
+   "count": 6
+  },
+  {
+   "theme": "Learning curve / onboarding concerns for new hires",
+   "count": 5
+  },
+  {
+   "theme": "Insufficient customization, granular permissions, custom fields",
+   "count": 5
+  },
+  {
+   "theme": "Missing dedicated release‑tracking features",
+   "count": 4
+  },
+  {
+   "theme": "No read‑only seat pricing or stakeholder visibility limits",
+   "count": 3
+  },
+  {
+   "theme": "Missing clear onboarding framework for AI agents",
+   "count": 3
+  },
+  {
+   "theme": "Handoff friction between design/engineering not addressed",
+   "count": 2
+  },
+  {
+   "theme": "Chat and tickets lumped together, no separation",
+   "count": 1
+  },
+  {
+   "theme": "Missing launch assets",
+   "count": 1
+  },
+  {
+   "theme": "No pricing info for low‑cost contributors",
+   "count": 1
+  }
+ ],
+ "rewrites": [
+  {
+   "index": 0,
+   "text": "# The product development system for teams and agents\n\nPurpose‑built for planning and building products. Designed for workflows shared by humans and AI agents.\n\n[New Loops →](https://linear.app/now/introducing-loops)\n\n---\n\n### Example: Faster iOS app launch (DRV‑8852)\n\n**Problem:** The app blocked initial render on a full `vehicle_state` sync, showing a spinner on every cold start.\n\n**Fix shipped:** Render the dashboard as soon as minimum required state is present; load the rest in the background.\n\n**How it happened in Linear:**\n1. Linear created the issue from a Slack conversation.\n2. Triage Intelligence labeled it *Performance* and *iOS*.\n3. A teammate asked Linear to take a stab.\n4. Linear opened a draft PR changing two files.\n5. The team reviewed and moved it to *In Progress*.\n\n**Result:** Cycle 144 • Linear App 1.6881… • Jun 25"
+  },
+  {
+   "index": 2,
+   "text": "## A new species of product tool\n\nLinear is purpose‑built for modern product teams and the AI agents that work alongside them. Three pillars:\n\n### 1. Purpose‑built\nShaped by the practices of world‑class product teams — not retrofitted from a ticket tracker.\n\n### 2. Powered by agents\nAgents participate in the same workflows as humans: drafting PRDs, writing code, opening pull requests, posting updates to Slack, and responding to changes in initiatives, projects, and cycles.\n\n### 3. Designed for speed\nReduces noise and restores momentum so teams ship with high velocity and focus.\n\n---\n\n**Proof point:** The *Faster app launch* example above shows an agent creating an issue from chat, labeling it, writing a diff, and opening a review — all without handoff friction."
+  },
+  {
+   "index": 1,
+   "text": "### Faster app launch\n\n**Issue:** Render UI before `vehicle_state` sync completes on iOS startup, instead of blocking on a full refresh.\n\n**Activity timeline:**\n- **Linear** created the issue via Slack on behalf of Karri (2 min ago)\n- **Triage Intelligence** added labels *Performance* and *iOS* (2 min ago)\n- **karri**: \"Right now we show a spinner forever, which makes it look like the car disappeared…\" (4 min ago)\n- **jori**: \"@Linear can you take a stab at this?\" (just now)\n- **Linear** (connected by Jori): Changed 2 files • Draft PR awaiting review (2 min ago)\n- **Linear** moved from *Todo* to *In Progress* (just now)\n\n**Context:** Cycle 144 • Linear App 1.6881… • Jun 25\n\n**Code change (summary):**\n- Old: `HomeScreen` returned a full‑screen `ActivityIndicator` while `syncStatus === PENDING`.\n- New: `HomeScreen` reads `syncStatus`; if `PENDING`, returns a lightweight `ActivityIndicator`; otherwise renders `<Dashboard state={vehicleState} syncStatus={syncStatus} />` immediately.\n\n**Result:** First paint no longer waits for full vehicle‑state sync."
+  }
+ ],
+ "gaps": "The page does not state: pricing or pricing model; self‑hosting or data‑residency options; a visual canvas/whiteboard for creative work; migration tooling or fidelity guarantees for Jira/legacy workflows; enterprise agent governance framework; granular permissions or custom fields; read‑only seat pricing; dedicated release‑tracking features; AI agent onboarding framework; concrete ROI metrics; or pricing for low‑cost contributors. These objections cannot be addressed in copy because the source sections contain no such facts."
+}
