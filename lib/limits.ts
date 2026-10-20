@@ -1,10 +1,10 @@
 // In-memory limits for the public deployment (single instance).
 // A request carrying `x-demo-token: $DEMO_TOKEN` bypasses all of them and may run up to 1,000 personas.
 export const MAX_PUBLIC_N = 200;
-const IP_PER_HOUR = 4; // swarm runs per IP
-const VERDICTS_PER_HOUR = 10;
-const DAILY_RUNS = 60;
-const MAX_ACTIVE = 2; // Nano is capped at 100 req/min, so concurrent runs throttle each other
+export const IP_PER_HOUR = 4; // swarm runs per IP
+export const VERDICTS_PER_HOUR = 10;
+export const DAILY_RUNS = 60;
+export const MAX_ACTIVE = 2; // Nano is capped at 100 req/min, so concurrent runs throttle each other
 
 const hits = new Map<string, number[]>();
 const daily = { day: "", runs: 0 };

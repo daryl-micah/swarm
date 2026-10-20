@@ -36,6 +36,13 @@ npm run dev            # http://localhost:3000
 
 List the model ids your key can use with `curl $NEBIUS_BASE_URL/models -H "Authorization: Bearer $NEBIUS_API_KEY"`.
 
+## Pages
+
+- `/`: landing, with the hero replaying a recorded run
+- `/run`: the product; run up to 200 personas on your own page (1,000 with `?demo=<DEMO_TOKEN>`)
+- `/evidence` and `/evidence/<id>`: every recorded run, replayed in the product UI
+- `/docs`: methodology, API, stream events, limits, costs
+
 ## Scripts
 
 - `npm run build` / `npm start`: production build and server. Use a long-lived host (a container) rather than short serverless timeouts, since a run streams for up to a minute or more.
@@ -47,14 +54,20 @@ MIT
 
 ## Evidence
 
-Raw captures of real runs against `https://linear.app` on Token Factory (Nano `NVIDIA-Nemotron-3-Nano-30B-A3B`, Ultra `Nemotron-3-Ultra-550b-a55b`, Nano concurrency 16). List reactions with `grep -A1 '^event: reaction' <file>`.
+Raw captures of real runs against `https://linear.app` and `https://plausible.io` on Token Factory (Nano `NVIDIA-Nemotron-3-Nano-30B-A3B`, Ultra `Nemotron-3-Ultra-550b-a55b`, Nano concurrency 16). List reactions with `grep -A1 '^event: reaction' <file>`.
 
 | Capture | Personas | Wall time | buy / maybe / bounce | Cost |
 |---|---|---|---|---|
-| [`evidence/linear-n30-v1-prompt.sse`](evidence/linear-n30-v1-prompt.sse) | 30 | 39s | 0 / 18 / 12 (first Nano prompt, too hedged) | ~$0.02 (est.) |
-| [`evidence/linear-n100.sse`](evidence/linear-n100.sse) | 100 | 72s | 25 / 46 / 29 | ~$0.07 (est.) |
-| [`evidence/linear-n1000.sse`](evidence/linear-n1000.sse) | 1,000 | 637s | 285 / 420 / 295 | $0.58 (measured) |
-| [`evidence/linear-n1000-verdict.json`](evidence/linear-n1000-verdict.json) | verdict on the 1,000 | ~20s | 15 ranked objection themes, 11 gaps the page doesn't answer, 3 rewrites that add no facts | $0.02 (measured) |
+| [`public/evidence/linear-n30-v1-prompt.sse`](public/evidence/linear-n30-v1-prompt.sse) | 30 | 39s | 0 / 18 / 12 (first Nano prompt, too hedged) | ~$0.02 (est.) |
+| [`public/evidence/linear-n100.sse`](public/evidence/linear-n100.sse) | 100 | 72s | 25 / 46 / 29 | ~$0.07 (est.) |
+| [`public/evidence/linear-n1000.sse`](public/evidence/linear-n1000.sse) | 1,000 | 637s | 285 / 420 / 295 | $0.58 (measured) |
+| [`public/evidence/linear-n1000-verdict.json`](public/evidence/linear-n1000-verdict.json) | verdict on the 1,000 | ~20s | 15 ranked objection themes, 11 gaps the page doesn't answer, 3 rewrites that add no facts | $0.02 (measured) |
+| [`public/evidence/linear-n100-verdict.json`](public/evidence/linear-n100-verdict.json) | verdict on the 100 | 22s | 3 rewrites | $0.025 (measured) |
+| [`public/evidence/linear-n100-rerun.sse`](public/evidence/linear-n100-rerun.sse) | same 100, rewritten page | 80s | 35 / 41 / 24 (buy 25% → 35%) | $0.052 (measured) |
+| [`public/evidence/linear-n100-control.sse`](public/evidence/linear-n100-control.sse) | same 100, unchanged page | 72s | 22 / 44 / 34 (run-to-run noise ≈ 3 pts) | $0.056 (measured) |
+| [`public/evidence/plausible-n100.sse`](public/evidence/plausible-n100.sse) | 100 on plausible.io | 99s | 73 / 18 / 9 | $0.043 (measured) |
+| [`public/evidence/plausible-n100-verdict.json`](public/evidence/plausible-n100-verdict.json) | verdict on the 100 | 8s | 3 rewrites | $0.012 (measured) |
+| [`public/evidence/plausible-n100-rerun.sse`](public/evidence/plausible-n100-rerun.sse) | same 100, rewritten page | 66s | 67 / 28 / 5 (buy fell 73% → 67%; bounces 9 → 5) | $0.037 (measured) |
 
 The 1,000-persona run completed with no errors or 429s. Measured usage: Nano 1,000 calls, 6.06M input and 0.83M output tokens ($0.56); Ultra segments 4.1k in / 2.4k out ($0.01); Ultra verdict 8.7k in / 6.9k out ($0.03). Prices are the Token Factory list prices (Nano $0.06 in / $0.24 out per 1M tokens, Ultra $1 / $3). The 30 and 100 runs predate usage logging, so their cost is scaled from the 1,000-run per-call averages.
 
