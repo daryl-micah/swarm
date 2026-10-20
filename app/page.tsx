@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Heatmap } from "@/components/Heatmap";
 import { SwarmGrid, type Reaction } from "@/components/SwarmGrid";
 import { Badge } from "@/components/ui/Badge";
@@ -12,9 +12,9 @@ type Verdict = { objections: { theme: string; count: number }[]; rewrites: { ind
 type Phase = "idle" | "running" | "done" | "judging" | "verdict" | "rerunning" | "rerun";
 
 // POST and call onEvent for each SSE event
-async function stream(body: object, onEvent: (e: string, d: any) => void) {
-  const r = await fetch("/api/swarm", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
-  if (!r.ok || !r.body) throw new Error(`swarm ${r.status}`);
+async function stream(body: object, headers: HeadersInit, onEvent: (e: string, d: any) => void) {
+  const r = await fetch("/api/swarm", { method: "POST", headers: { "content-type": "application/json", ...headers }, body: JSON.stringify(body) });
+  if (!r.ok || !r.body) throw new Error((await r.json().catch(() => null))?.error ?? `swarm ${r.status}`);
   const reader = r.body.getReader();
   const dec = new TextDecoder();
   let buf = "";
@@ -48,6 +48,10 @@ export default function Page() {
   const [before, setBefore] = useState<number>();
   const [newSections, setNewSections] = useState<string[]>([]);
   const seed = useRef(0);
+  // ?demo=<token> unlocks up to 1,000 personas and bypasses the public limits
+  const [demo, setDemo] = useState("");
+  useEffect(() => setDemo(new URLSearchParams(location.search).get("demo") ?? ""), []);
+  const demoHeaders: HeadersInit = demo ? { "x-demo-token": demo } : {};
 
   const run = async (body: object, rerun = false) => {
     setError("");
@@ -57,7 +61,7 @@ export default function Page() {
     const acc = new Map<number, Reaction>();
     let flush = 0;
     try {
-      await stream(body, (e, d) => {
+      await stream(body, demoHeaders, (e, d) => {
         if (e === "research") setLog((l) => [...l, d.source ? `${d.line}  ${d.source.title}` : d.line]);
         if (e === "sections") setSections(d);
         if (e === "segments") setSegments(d);
@@ -81,8 +85,8 @@ export default function Page() {
   const judge = async () => {
     setPhase("judging");
     try {
-      const r = await fetch("/api/verdict", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ sections, reactions: [...reactions.values()] }) });
-      if (!r.ok) throw new Error(`verdict ${r.status}`);
+      const r = await fetch("/api/verdict", { method: "POST", headers: { "content-type": "application/json", ...demoHeaders }, body: JSON.stringify({ sections, reactions: [...reactions.values()] }) });
+      if (!r.ok) throw new Error((await r.json().catch(() => null))?.error ?? `verdict ${r.status}`);
       setVerdict(await r.json());
       setPhase("verdict");
     } catch (e: any) {
@@ -124,7 +128,7 @@ export default function Page() {
         <form className="grid gap-4 md:grid-cols-[2fr_2fr_1fr_auto] items-end" onSubmit={(e) => { e.preventDefault(); start(); }}>
           <Input label="Landing page URL" type="url" required placeholder="https://yourproduct.com" value={url} onChange={(e) => setUrl(e.target.value)} disabled={busy} />
           <Input label="Who is it for (optional)" placeholder="freelance designers" value={audience} onChange={(e) => setAudience(e.target.value)} disabled={busy} />
-          <Input label={`Personas: ${n}`} type="range" min={10} max={1000} step={10} value={n} onChange={(e) => setN(+e.target.value)} disabled={busy} />
+          <Input label={`Personas: ${n}`} type="range" min={10} max={demo ? 1000 : 200} step={10} value={n} onChange={(e) => setN(+e.target.value)} disabled={busy} />
           <Button type="submit" loading={busy}>{busy ? "Running…" : "Run swarm"}</Button>
         </form>
         {error && (

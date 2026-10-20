@@ -1,4 +1,4 @@
-export function sse(run: (send: (event: string, data: unknown) => void) => Promise<void>) {
+export function sse(run: (send: (event: string, data: unknown) => void) => Promise<void>, onEnd?: () => void) {
   const enc = new TextEncoder();
   const stream = new ReadableStream({
     async start(c) {
@@ -9,6 +9,7 @@ export function sse(run: (send: (event: string, data: unknown) => void) => Promi
       } catch (e: any) {
         send("error", { message: String(e?.message ?? e) });
       }
+      onEnd?.();
       c.close();
     },
   });

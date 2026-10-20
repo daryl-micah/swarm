@@ -1,4 +1,5 @@
 import { json, NANO, ULTRA } from "@/lib/llm";
+import { admit } from "@/lib/limits";
 import { pMap, samplePersonas, type Segment } from "@/lib/personas";
 import { sse } from "@/lib/sse";
 import { extract, search, toSections } from "@/lib/tavily";
@@ -11,6 +12,8 @@ type Body = { url?: string; text?: string; audience?: string; n?: number; seed?:
 export async function POST(req: Request) {
   const b: Body = await req.json();
   const n = Math.min(Math.max(b.n ?? 200, 1), 1000);
+  const gate = admit(req, n);
+  if (gate instanceof Response) return gate;
   const seed = b.seed ?? Math.floor(Math.random() * 1e9);
 
   return sse(async (send) => {
@@ -61,5 +64,5 @@ export async function POST(req: Request) {
       }
     });
     send("done", {});
-  });
+  }, gate.release);
 }

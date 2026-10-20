@@ -1,10 +1,13 @@
 import { json, ULTRA } from "@/lib/llm";
+import { admit } from "@/lib/limits";
 
 export const maxDuration = 120;
 
 type Reaction = { verdict: string; dropSection: number; objection: string };
 
 export async function POST(req: Request) {
+  const gate = admit(req);
+  if (gate instanceof Response) return gate;
   const { sections, reactions }: { sections: string[]; reactions: Reaction[] } = await req.json();
   const bad = reactions.filter((r) => r.verdict !== "buy" && r.objection).slice(0, 300);
   const drops = sections.map((_, i) => bad.filter((r) => r.dropSection === i).length);

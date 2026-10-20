@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check": "tsx lib/personas.ts"
+    "check": "tsx lib/personas.ts && tsx lib/limits.ts"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
