@@ -13,6 +13,7 @@ export function SiteFooter() {
           <Link className="link" href="/run">Run your page</Link>
           <Link className="link" href="/evidence">Evidence</Link>
           <Link className="link" href="/docs">Docs</Link>
+          <a className="link" href="https://github.com/daryl-micah/swarm">Source on GitHub</a>
         </nav>
         <span className="data">MIT licence</span>
       </div>
